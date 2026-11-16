@@ -112,6 +112,10 @@ struct EventHandler : public bmqa::SessionEventHandler {
 
     /// Successfully open a queue in the `e_WRITE` mode with the specified
     /// `mockSession_p`, `queueId` and `uri`.
+    // Intentionally uses the deprecated int-returning `openQueueAsync` so
+    // that the queue-open result is delivered as a session event.
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
     static void openQueue(bmqa::MockSession* mockSession_p,
                           bmqa::QueueId*     queueId,
                           const bmqt::Uri&   uri)
@@ -136,6 +140,7 @@ struct EventHandler : public bmqa::SessionEventHandler {
         mockSession.openQueueAsync(queueId, uri, bmqt::QueueFlags::e_WRITE);
         mockSession.emitEvent();
     }
+#pragma GCC diagnostic pop
 
     /// Compare if the specified `lhs` event is equal to the specified `rhs`
     /// event.  This method only compares if they stream equal.
@@ -757,6 +762,10 @@ static void test3_queueManagement()
     }
 }
 
+// Intentionally exercises the deprecated int-returning `openQueueAsync`
+// of `bmqa::MockSession`.
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 static void test4_queueManagementSync()
 {
     bmqtst::TestHelper::printTestName("QUEUE MANAGEMENT SYNC MODE");
@@ -849,6 +858,7 @@ static void test4_queueManagementSync()
         BMQTST_ASSERT_EQ(implPtr->state(), bmqimp::QueueState::e_OPENED);
     }
 }
+#pragma GCC diagnostic pop
 
 static void test5_confirmingMessages()
 {
@@ -1025,6 +1035,10 @@ static void test5_confirmingMessages()
     }
 }
 
+// Intentionally exercises every deprecated queue management overload of
+// `bmqa::MockSession` to validate the deprecated mock surface.
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 static void test6_runThrough()
 {
     bmqtst::TestHelper::printTestName("RUN THROUGH");
@@ -1285,6 +1299,7 @@ static void test6_runThrough()
     // Clear the handler since we dont care about the events emitted
     eventHandler.clearEvents();
 }
+#pragma GCC diagnostic pop
 
 static void test7_postAndAccess()
 {
