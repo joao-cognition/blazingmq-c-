@@ -18,7 +18,7 @@ from decimal import Decimal
 from enum import Enum
 from typing import List, Optional
 
-__NAMESPACE__ = "urn:x-bloomberg-com:mqbconfm"
+__NAMESPACE__ = "urn:x-bnpparibas-com:mqbconfm"
 
 
 class ExpressionVersion(Enum):
@@ -63,7 +63,7 @@ class Limits:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "required": True,
         },
     )
@@ -72,7 +72,7 @@ class Limits:
         metadata={
             "name": "messagesWatermarkRatio",
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "required": True,
         },
     )
@@ -80,7 +80,7 @@ class Limits:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "required": True,
         },
     )
@@ -89,7 +89,7 @@ class Limits:
         metadata={
             "name": "bytesWatermarkRatio",
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "required": True,
         },
     )
@@ -118,7 +118,7 @@ class MsgGroupIdConfig:
         default=False,
         metadata={
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "required": True,
         },
     )
@@ -127,7 +127,7 @@ class MsgGroupIdConfig:
         metadata={
             "name": "maxGroups",
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "required": True,
         },
     )
@@ -136,7 +136,7 @@ class MsgGroupIdConfig:
         metadata={
             "name": "ttlSeconds",
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "required": True,
         },
     )
@@ -177,7 +177,7 @@ class QueueModeFanout:
         metadata={
             "name": "appIDs",
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "min_occurs": 1,
         },
     )
@@ -186,7 +186,7 @@ class QueueModeFanout:
         metadata={
             "name": "publishAppIdMetrics",
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "required": True,
         },
     )
@@ -211,14 +211,14 @@ class Consistency:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
         },
     )
     strong: Optional[QueueConsistencyStrong] = field(
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
         },
     )
 
@@ -236,7 +236,7 @@ class Expression:
         default=ExpressionVersion.E_UNDEFINED,
         metadata={
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "required": True,
         },
     )
@@ -244,7 +244,7 @@ class Expression:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "required": True,
         },
     )
@@ -264,21 +264,21 @@ class QueueMode:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
         },
     )
     priority: Optional[QueueModePriority] = field(
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
         },
     )
     broadcast: Optional[QueueModeBroadcast] = field(
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
         },
     )
 
@@ -295,7 +295,7 @@ class Storage:
         metadata={
             "name": "inMemory",
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
         },
     )
     file_backed: Optional[FileBackedStorage] = field(
@@ -303,7 +303,7 @@ class Storage:
         metadata={
             "name": "fileBacked",
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
         },
     )
 
@@ -324,7 +324,7 @@ class StorageDefinition:
         metadata={
             "name": "domainLimits",
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "required": True,
         },
     )
@@ -333,7 +333,7 @@ class StorageDefinition:
         metadata={
             "name": "queueLimits",
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "required": True,
         },
     )
@@ -341,7 +341,7 @@ class StorageDefinition:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "required": True,
         },
     )
@@ -361,7 +361,7 @@ class Subscription:
         metadata={
             "name": "appId",
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "required": True,
         },
     )
@@ -369,7 +369,7 @@ class Subscription:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "required": True,
         },
     )
@@ -377,7 +377,7 @@ class Subscription:
 
 @dataclass
 class Domain:
-    """Configuration for a Domain using the custom Bloomberg Domain.
+    """Configuration for a Domain using the custom BNP Paribas Domain.
 
     name................: name of this domain
     mode................: mode of the queues in this domain
@@ -414,7 +414,7 @@ class Domain:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "required": True,
         },
     )
@@ -422,7 +422,7 @@ class Domain:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "required": True,
         },
     )
@@ -430,7 +430,7 @@ class Domain:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "required": True,
         },
     )
@@ -439,7 +439,7 @@ class Domain:
         metadata={
             "name": "maxConsumers",
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "required": True,
         },
     )
@@ -448,7 +448,7 @@ class Domain:
         metadata={
             "name": "maxProducers",
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "required": True,
         },
     )
@@ -457,7 +457,7 @@ class Domain:
         metadata={
             "name": "maxQueues",
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "required": True,
         },
     )
@@ -466,7 +466,7 @@ class Domain:
         metadata={
             "name": "msgGroupIdConfig",
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
         },
     )
     max_idle_time: int = field(
@@ -474,7 +474,7 @@ class Domain:
         metadata={
             "name": "maxIdleTime",
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "required": True,
         },
     )
@@ -483,7 +483,7 @@ class Domain:
         metadata={
             "name": "messageTtl",
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "required": True,
         },
     )
@@ -492,7 +492,7 @@ class Domain:
         metadata={
             "name": "maxDeliveryAttempts",
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "required": True,
         },
     )
@@ -501,7 +501,7 @@ class Domain:
         metadata={
             "name": "deduplicationTimeMs",
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "required": True,
         },
     )
@@ -509,7 +509,7 @@ class Domain:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "required": True,
         },
     )
@@ -517,7 +517,7 @@ class Domain:
         default_factory=list,
         metadata={
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "min_occurs": 1,
         },
     )
@@ -537,7 +537,7 @@ class DomainDefinition:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "required": True,
         },
     )
@@ -545,7 +545,7 @@ class DomainDefinition:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
             "required": True,
         },
     )
@@ -563,13 +563,13 @@ class DomainVariant:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
         },
     )
     redirect: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "urn:x-bloomberg-com:mqbconfm",
+            "namespace": "urn:x-bnpparibas-com:mqbconfm",
         },
     )

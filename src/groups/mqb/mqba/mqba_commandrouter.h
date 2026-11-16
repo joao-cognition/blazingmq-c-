@@ -61,7 +61,7 @@
 #include <bsl_memory.h>
 #include <mqbcmd_messages.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 // FORWARD DECLARATION
 namespace bmqp_ctrlmsg {

@@ -202,7 +202,7 @@
 #include <bsls_keyword.h>
 #include <bsls_nullptr.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 // FORWARD DECLARATION
 namespace bslma {

@@ -94,7 +94,7 @@
 #include <bslmf_nestedtraitdeclaration.h>
 #include <bsls_types.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqt {
 
 // =================
@@ -354,7 +354,7 @@ inline void MessageGUIDHashAlgo::operator()(const void*              data,
     // our specific use case here.
 
     // Performance evaluation, hash quality and avalanche effect are here:
-    // https://github.com/bloomberg/blazingmq/pull/348
+    // https://github.com/joao-cognition/blazingmq-c-/pull/348
 
     struct LocalFuncs {
         /// Return the "mxm" bit mix on the specified `x`.

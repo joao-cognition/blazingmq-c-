@@ -16,7 +16,7 @@
 #include <bmqscm_version.h>
 
 #include <bmqscm_version.h>
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 #define STRINGIFY2(a) #a
 #define STRINGIFY(a) STRINGIFY2(a)

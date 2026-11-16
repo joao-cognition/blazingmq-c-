@@ -29,7 +29,7 @@
 #include <bsl_iosfwd.h>
 #include <bslh_hash.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqp {
 
 // =============

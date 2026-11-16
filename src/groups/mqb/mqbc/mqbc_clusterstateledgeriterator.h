@@ -44,7 +44,7 @@
 #include <bslma_allocator.h>
 #include <bslma_managedptr.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbc {
 
 // =================================

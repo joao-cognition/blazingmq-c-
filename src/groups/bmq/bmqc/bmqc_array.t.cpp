@@ -37,7 +37,7 @@
 #endif  // BMQTST_BENCHMARK_ENABLED
 
 // CONVENIENCE
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 using namespace bsl;
 
 // ============================================================================
@@ -874,7 +874,7 @@ static void test10_pushBackSelfRef()
 
 #ifdef BMQTST_BENCHMARK_ENABLED
 
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 
 static void VectorIteration_GoogleBenchmark(benchmark::State& state)
 {

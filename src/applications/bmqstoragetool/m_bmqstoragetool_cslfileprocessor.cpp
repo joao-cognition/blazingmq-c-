@@ -21,7 +21,7 @@
 #include <m_bmqstoragetool_filters.h>
 #include <m_bmqstoragetool_parameters.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace m_bmqstoragetool {
 
 // ======================

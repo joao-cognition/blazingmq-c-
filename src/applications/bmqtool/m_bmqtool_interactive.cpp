@@ -48,7 +48,7 @@
 #include <bslmt_lockguard.h>
 #include <bslmt_turnstile.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace m_bmqtool {
 
 namespace {
@@ -905,7 +905,7 @@ int Interactive::initialize(bmqa::Session*             session,
                             bmqa::SessionEventHandler* sessionEventHandler)
 {
     // Print the welcome banner
-    BALL_LOG_INFO << "Welcome to the BlazingMQ tool.\n"
+    BALL_LOG_INFO << "Welcome to the BNP Paribas BlazingMQ tool.\n"
                   << "Type 'help' to see the list of commands. Crl-D to quit.";
 
     d_session_p             = session;

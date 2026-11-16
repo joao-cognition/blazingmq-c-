@@ -43,7 +43,7 @@
 #include <bslmf_nestedtraitdeclaration.h>
 #include <bsls_keyword.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 // FORWARD DECLARATION
 namespace bdlmt {

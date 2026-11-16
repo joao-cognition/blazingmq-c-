@@ -37,7 +37,7 @@
 #include <bsl_algorithm.h>
 #include <bsl_memory.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace m_bmqstoragetool {
 
 /// Move the journal iterator pointed by the specified 'jit' to the first

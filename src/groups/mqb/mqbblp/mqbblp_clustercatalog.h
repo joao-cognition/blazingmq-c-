@@ -64,7 +64,7 @@
 #include <bsls_cpp11.h>
 #include <bsls_keyword.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 // FORWARD DECLARATION
 namespace bdlmt {

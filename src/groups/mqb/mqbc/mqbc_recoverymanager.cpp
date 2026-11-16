@@ -64,7 +64,7 @@
 #include <bdls_filesystemutil.h>
 #include <bsl_algorithm.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbc {
 
 namespace {

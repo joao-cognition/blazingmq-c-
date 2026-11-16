@@ -26,7 +26,7 @@
 #include <windows.h>
 #endif
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqu {
 
 // ---------------

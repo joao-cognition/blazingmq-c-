@@ -18,7 +18,7 @@
 #include <bsl_vector.h>
 #include <m_bmqstoragetool_queuemap.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace m_bmqstoragetool {
 
 namespace {

@@ -37,7 +37,7 @@
 #include <bsls_systemtime.h>
 #include <bsls_timeinterval.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 namespace {
 

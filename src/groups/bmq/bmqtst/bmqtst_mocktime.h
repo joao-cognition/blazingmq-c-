@@ -41,7 +41,7 @@
 #include <bsls_timeinterval.h>
 #include <bsls_types.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqtst {
 
 // ==============

@@ -52,10 +52,10 @@
 #include <bsl_memory.h>
 
 // CONVENIENCE
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 using namespace bsl;
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqio {
 
 class TestChannelEx : public TestChannel {
@@ -313,7 +313,7 @@ inline void setContent(bdlbb::BlobBuffer* buffer)
 // class TestChannel
 // -----------------
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqio {
 
 TestChannelEx::TestChannelEx(mqbnet::Channel*                channel,
@@ -660,7 +660,7 @@ inline size_t Tester<Builder>::verify(
     for (BlobDeque::iterator itHistory = d_history.begin();
          itHistory != d_history.end();
          ++itHistory) {
-        const bsl::shared_ptr<BloombergLP::bdlbb::Blob>& blob_sp = *itHistory;
+        const bsl::shared_ptr<BNP_Paribas::bdlbb::Blob>& blob_sp = *itHistory;
         bmqp::Event       eventHistory(blob_sp.get(), d_allocator_p);
         Iterator<Builder> itHistoryEvents(&d_bufferFactory, d_allocator_p);
 

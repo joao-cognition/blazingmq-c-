@@ -25,7 +25,7 @@
 #include <bsl_set.h>
 #include <bsl_sstream.h>
 
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 using namespace bmqst;
 using namespace bsl;
 

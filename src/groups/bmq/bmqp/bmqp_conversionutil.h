@@ -36,7 +36,7 @@
 #include <bsl_string.h>
 #include <bsls_assert.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqp {
 
 // =====================

@@ -22,7 +22,7 @@
 #include <bslim_printer.h>
 #include <bslma_default.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbplug {
 
 // ----------------

@@ -16,7 +16,7 @@
 #ifndef INCLUDED_MQBNET_CONNECTIONTYPE
 #define INCLUDED_MQBNET_CONNECTIONTYPE
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbnet {
 
 // =====================

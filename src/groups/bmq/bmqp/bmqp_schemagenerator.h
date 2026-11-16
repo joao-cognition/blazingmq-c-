@@ -58,7 +58,7 @@
 #include <bslma_allocator.h>
 #include <bsls_spinlock.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqp {
 
 // =====================

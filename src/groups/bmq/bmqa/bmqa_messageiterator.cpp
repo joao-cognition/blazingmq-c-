@@ -26,7 +26,7 @@
 #include <bsl_iostream.h>
 #include <bsls_assert.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqa {
 
 // ---------------------

@@ -27,7 +27,7 @@
 #include <bslmf_assert.h>
 #include <bsls_alignmentfromtype.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqp {
 
 namespace {

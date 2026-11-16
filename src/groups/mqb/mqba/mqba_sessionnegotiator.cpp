@@ -96,7 +96,7 @@
 // NTC
 #include <ntsa_ipaddress.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqba {
 
 namespace {

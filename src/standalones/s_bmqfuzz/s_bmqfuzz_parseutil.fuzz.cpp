@@ -20,7 +20,7 @@
 #include <mqbcmd_messages.h>
 #include <mqbcmd_parseutil.h>
 
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 using namespace bsl;
 
 extern "C" int LLVMFuzzerTestOneInput(const uint8_t* data, size_t size)

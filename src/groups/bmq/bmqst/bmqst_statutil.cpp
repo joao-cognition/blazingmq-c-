@@ -19,7 +19,7 @@
 #include <bsl_algorithm.h>
 #include <bsl_limits.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqst {
 
 namespace {

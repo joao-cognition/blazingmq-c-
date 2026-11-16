@@ -23,7 +23,7 @@
 #include <bsl_iostream.h>
 #include <bsls_asserttest.h>
 
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 
 // ============================================================================
 //                                  UTILITIES

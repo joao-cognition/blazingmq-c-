@@ -1,24 +1,24 @@
 <p align="center">
-  <a href="https://bloomberg.github.io/blazingmq">
+  <a href="https://github.com/joao-cognition/blazingmq-c-">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="docs/assets/images/blazingmq_logo_label_dark.svg">
-      <img src="docs/assets/images/blazingmq_logo_label.svg" width="70%">
+      <img src="docs/assets/images/blazingmq_logo_label.svg" width="70%" alt="BNP Paribas BlazingMQ">
     </picture>
   </a>
 </p>
 
 ---
-[![OS Linux](https://img.shields.io/badge/OS-Linux-blue)](#)
-[![OS Solaris](https://img.shields.io/badge/OS-Solaris-blue)](#)
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue)](LICENSE)
-[![C++](https://img.shields.io/badge/C++-blue)](#)
-[![CMake](https://img.shields.io/badge/CMake-blue)](#)
-[![MessageQueue](https://img.shields.io/badge/MessageQueue-blue)](#)
-[![Documentation](https://img.shields.io/badge/Documentation-blue)](https://bloomberg.github.io/blazingmq)
+[![OS Linux](https://img.shields.io/badge/OS-Linux-00915A)](#)
+[![OS Solaris](https://img.shields.io/badge/OS-Solaris-00915A)](#)
+[![License](https://img.shields.io/badge/License-Apache_2.0-00915A)](LICENSE)
+[![C++](https://img.shields.io/badge/C++-00915A)](#)
+[![CMake](https://img.shields.io/badge/CMake-00915A)](#)
+[![MessageQueue](https://img.shields.io/badge/MessageQueue-00915A)](#)
+[![Documentation](https://img.shields.io/badge/Documentation-00915A)](https://bloomberg.github.io/blazingmq)
 
 # BlazingMQ - A Modern, High-Performance Message Queue
 
-[BlazingMQ](https://bloomberg.github.io/blazingmq) is an open source
+BlazingMQ is the BNP Paribas
 distributed message queueing framework, which focuses on efficiency,
 reliability, and a rich feature set for modern-day workflows.
 
@@ -41,7 +41,7 @@ BlazingMQ's back-end (message brokers) has been implemented in C++, and client
 libraries are available in C++, Java, and Python.
 
 BlazingMQ is an actively developed project and has been battle-tested in
-production at Bloomberg for 8+ years.
+production for 8+ years.
 
 This repository the contains BlazingMQ message broker, the BlazingMQ C++ client
 library, and a BlazingMQ command line tool. The BlazingMQ
@@ -139,13 +139,13 @@ BlazingMQ is Apache 2.0 licensed, as found in the [LICENSE](LICENSE) file.
 This project has adopted a [Code of
 Conduct](https://github.com/bloomberg/.github/blob/main/CODE_OF_CONDUCT.md).
 If you have any concerns about the Code, or behavior which you have experienced
-in the project, please contact us at opensource@bloomberg.net.
+in the project, please contact us at opensource@bnpparibas.com.
 
 
 ## Security Vulnerability Reporting
 
 If you believe you have identified a security vulnerability in this project,
-please send an email to the project team at opensource@bloomberg.net, detailing
+please send an email to the project team at opensource@bnpparibas.com, detailing
 the suspected issue and any methods you've found to reproduce it.
 
 Please do NOT open an issue in the GitHub repository, as we'd prefer to keep

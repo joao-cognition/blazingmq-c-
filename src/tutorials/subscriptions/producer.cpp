@@ -54,7 +54,7 @@
 #include <bsls_assert.h>
 #include <bsls_spinlock.h>
 
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 
 namespace {
 

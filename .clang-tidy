@@ -2,7 +2,7 @@ Checks: bugprone-*,cert-*,clang-analyzer-*,clang-diagnostic-*,cppcoreguidelines-
 CheckOptions:
   cppcoreguidelines-special-member-functions.AllowSoleDefaultDtor: true
   bugprone-string-constructor.StringNames: ::bsl::basic_string; ::std::basic_string; ::std::basic_string_view
-  bugprone-optional-value-conversion.OptionalTypes: ::bsl::optional; ::BloombergLP::bdlb::NullableValue; ::std::optional; ::absl::optional; ::boost::optional
+  bugprone-optional-value-conversion.OptionalTypes: ::bsl::optional; ::BNP_Paribas::bdlb::NullableValue; ::std::optional; ::absl::optional; ::boost::optional
   bugprone-capturing-this-in-member-variable.FunctionWrapperTypes:
     ::bsl::function; ::bsl::move_only_function; ::std::function; ::std::move_only_function;
     ::boost::function

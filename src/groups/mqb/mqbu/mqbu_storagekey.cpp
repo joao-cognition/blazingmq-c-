@@ -19,7 +19,7 @@
 // BSL
 #include <bslmf_assert.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbu {
 
 BSLMF_ASSERT(StorageKey::e_KEY_LENGTH_BINARY == sizeof(StorageKey));

@@ -21,7 +21,7 @@
 #include <bdlf_bind.h>
 #include <bsl_utility.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqp {
 
 // ============================

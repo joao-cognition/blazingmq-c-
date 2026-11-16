@@ -56,7 +56,7 @@
 #include <bsls_atomic.h>
 #include <bsls_cpp11.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 // FORWARD DECLARATION
 namespace bslmt {
@@ -268,7 +268,7 @@ class DomainManager BSLS_CPP11_FINAL : public mqbi::DomainFactory {
     // PRIVATE ACCESSORS
 
     /// Returns `true` if the location of the specified `domainLocation` is
-    /// part of a cluster of `type` `Bloomberg`, and `false`, otherwise.
+    /// part of a cluster of `type` `BNP Paribas`, and `false`, otherwise.
     bool isClusterMember(const bsl::string& domainLocation) const;
 
   private:

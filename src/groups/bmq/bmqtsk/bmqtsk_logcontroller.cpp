@@ -52,7 +52,7 @@
 
 #include <unistd.h>  // symlink()
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqtsk {
 
 namespace {

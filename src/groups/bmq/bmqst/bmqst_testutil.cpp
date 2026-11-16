@@ -25,7 +25,7 @@
 #include <bsl_vector.h>
 #include <stdlib.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqst {
 
 // ---------------

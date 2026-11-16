@@ -28,7 +28,7 @@
 #include <bsl_vector.h>
 #include <bslim_printer.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace m_bmqstoragetool {
 
 namespace {

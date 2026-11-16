@@ -51,7 +51,7 @@
 #endif
 #include <bsl_cstdlib.h>
 
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 using namespace m_bmqtool;
 
 // On UNIX only, ignore the SIGPIPE signal.

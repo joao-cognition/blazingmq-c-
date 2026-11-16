@@ -46,7 +46,7 @@
 #include <bsl_list.h>
 #include <bsl_ostream.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbmock {
 
 // =================================

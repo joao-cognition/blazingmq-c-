@@ -36,7 +36,7 @@
 #include <bslmt_threadutil.h>
 #include <bsls_assert.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace m_bmqtool {
 
 namespace {

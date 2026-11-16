@@ -23,7 +23,7 @@
 #include <bsl_vector.h>
 #include <bsls_assert.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 BALL_LOG_SET_NAMESPACE_CATEGORY("MQBCMD.UTIL");
 
@@ -207,7 +207,7 @@ void Util::printCommandResponses(const mqbcmd::RouteResponseList& responseList,
                                  const mqbcmd::EncodingFormat::Value format,
                                  bsl::ostream&                       os)
 {
-    typedef bsl::vector<BloombergLP::mqbcmd::RouteResponse>
+    typedef bsl::vector<BNP_Paribas::mqbcmd::RouteResponse>
         RouteResponseVector;
 
     RouteResponseVector responses = responseList.responses();

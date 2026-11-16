@@ -60,7 +60,7 @@
 #include <bsls_atomic.h>
 #include <bsls_performancehint.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqa {
 
 namespace {

@@ -33,7 +33,7 @@
 #include <bsl_vector.h>
 
 // CONVENIENCE
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 using namespace m_bmqstoragetool;
 
 // ============================================================================

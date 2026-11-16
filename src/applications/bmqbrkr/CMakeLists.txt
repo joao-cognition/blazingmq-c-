@@ -3,12 +3,12 @@
 
 # bmqbrkr uses an architecture of plugins in shared libraries, which are
 # dynamically loaded by bmqbrkr.tsk at startup based on configuration. Those
-# plugins typically may have vendor or Bloomberg dependencies, and this is why
+# plugins typically may have vendor or BNP Paribas dependencies, and this is why
 # they are taken out from the core 'bmqbrkr.tsk', in order to keep its
 # dependencies to the bare minimum, while still providing a single package for
 # the BlazingMQ infrastructure.
 #
-# Shared libraries at Bloomberg are not so much recommended, and BDE only
+# Shared libraries at BNP Paribas are not so much recommended, and BDE only
 # provides static versions of their libraries, with some of them (bsl
 # Allocator, ball LogManager, ...) using static global variables.  Therefore,
 # it is not recommended (or even not possible) to have the task and the plugins

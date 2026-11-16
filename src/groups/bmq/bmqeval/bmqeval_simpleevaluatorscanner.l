@@ -8,7 +8,7 @@
     #include <bmqeval_simpleevaluatorparser.hpp>
     #include <bmqeval_simpleevaluatorscanner.h>
 
-	using namespace BloombergLP::bmqeval;
+	using namespace BNP_Paribas::bmqeval;
 
 	#define yyterminate() SimpleEvaluatorParser::make_END();
 %}
@@ -17,7 +17,7 @@
 %option noyywrap
 %option c++
 %option yyclass="SimpleEvaluatorScanner"
-%option prefix="BloombergLP_bmqeval_simpleevaluator_"
+%option prefix="BNP_Paribas_bmqeval_simpleevaluator_"
 
 %%
 

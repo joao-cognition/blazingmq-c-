@@ -80,7 +80,7 @@
 #include <bsls_keyword.h>
 #include <bsls_spinlock.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 // FORWARD DECLARATION
 namespace bslmt {

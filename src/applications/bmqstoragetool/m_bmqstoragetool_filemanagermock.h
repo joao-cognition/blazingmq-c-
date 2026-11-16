@@ -29,7 +29,7 @@
 
 #include <gmock/gmock.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 namespace m_bmqstoragetool {
 

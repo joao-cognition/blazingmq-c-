@@ -39,7 +39,7 @@
 #include <bsl_ostream.h>
 #include <bsl_vector.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbnet {
 
 namespace {

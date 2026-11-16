@@ -27,7 +27,7 @@
 #include <bdld_datummapbuilder.h>
 #include <bsl_limits.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbstat {
 
 namespace {

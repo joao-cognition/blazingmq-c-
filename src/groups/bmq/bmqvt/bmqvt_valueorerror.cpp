@@ -16,7 +16,7 @@
 #include <bmqvt_valueorerror.h>
 
 #include <bmqscm_version.h>
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqvt {
 
 // NOTHING

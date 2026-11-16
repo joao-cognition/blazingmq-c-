@@ -213,7 +213,7 @@
 #include <bsla_annotations.h>
 #include <bsla_deprecated.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqp {
 
 // =============

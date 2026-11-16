@@ -27,7 +27,7 @@
 #include <ball_scopedattribute.h>
 #include <bsl_memory.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqba {
 
 // -------------------

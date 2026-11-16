@@ -19,7 +19,7 @@
 // BDE
 #include <bsls_performancehint.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqp {
 
 // ---------------------------

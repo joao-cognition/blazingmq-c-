@@ -22,7 +22,7 @@
 #include <bsl_memory.h>
 #include <bsl_vector.h>
 
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 
 namespace {
 

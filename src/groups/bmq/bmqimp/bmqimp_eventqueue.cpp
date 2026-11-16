@@ -45,7 +45,7 @@
 #include <bsls_performancehint.h>
 #include <bsls_timeutil.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqimp {
 
 namespace {

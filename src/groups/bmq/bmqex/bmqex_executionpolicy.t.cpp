@@ -27,7 +27,7 @@
 #include <bslma_testallocator.h>
 
 // CONVENIENCE
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 
 // ============================================================================
 //                                    TESTS

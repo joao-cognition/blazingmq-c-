@@ -46,7 +46,7 @@
 #include <bsl_memory.h>
 #include <bsl_set.h>
 
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 using namespace bsl;
 using namespace mqbblp;
 

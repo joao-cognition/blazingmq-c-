@@ -38,7 +38,7 @@
 #include <bsl_unordered_map.h>
 #include <bsl_vector.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace m_bmqstoragetool {
 
 // FREE FUNCTIONS
@@ -48,7 +48,7 @@ namespace m_bmqstoragetool {
 /// otherwise.
 bool findQueueAppIdByAppKey(
     bsl::string*                                             appId,
-    const bsl::vector<BloombergLP::bmqp_ctrlmsg::AppIdInfo>& appIds,
+    const bsl::vector<BNP_Paribas::bmqp_ctrlmsg::AppIdInfo>& appIds,
     const mqbu::StorageKey&                                  appKey);
 
 // ===================

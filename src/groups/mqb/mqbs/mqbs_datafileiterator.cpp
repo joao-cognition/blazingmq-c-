@@ -22,7 +22,7 @@
 // BMQ
 #include <bmqp_protocol.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbs {
 
 // ----------------------

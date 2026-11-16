@@ -21,7 +21,7 @@
 #include <mqbauthn_basiccredentialprovider.h>
 #include <mqbauthn_testauthenticator.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbauthn {
 
 // -------------------

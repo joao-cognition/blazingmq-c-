@@ -32,7 +32,7 @@
 #include <bsl_memory.h>
 #include <bsl_string_view.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqpi {
 
 // ==============

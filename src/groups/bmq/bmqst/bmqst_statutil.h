@@ -40,7 +40,7 @@
 #include <bsls_types.h>
 #endif
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqst {
 
 // ===============

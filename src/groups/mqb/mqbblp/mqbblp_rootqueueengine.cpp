@@ -65,7 +65,7 @@
 #include <bsls_assert.h>
 #include <bsls_timeinterval.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbblp {
 
 namespace {

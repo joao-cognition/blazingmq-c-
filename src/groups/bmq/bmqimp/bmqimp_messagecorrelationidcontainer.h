@@ -52,7 +52,7 @@
 #include <bsls_cpp11.h>
 #include <bsls_spinlock.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 namespace bmqp {
 class RequestManagerRequest;

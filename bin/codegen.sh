@@ -16,7 +16,7 @@
 
 # This is a codegen script used to generate implementations of the schema format used in BlazingMQ.
 #
-# This script is not able to be run by non-Bloomberg developers as it relies on internal tooling.
+# This script is not able to be run by non-BNP Paribas developers as it relies on internal tooling.
 
 readonly COPYRIGHT="// Copyright 2026 Bloomberg Finance L.P.
 // SPDX-License-Identifier: Apache-2.0
@@ -74,9 +74,9 @@ main() {
   set -eux
 
   if [[ -z "${CODEGEN}" ]]; then
-    echo "This script is not able to be run by non-Bloomberg developers as it relies on \
+    echo "This script is not able to be run by non-BNP Paribas developers as it relies on \
 internal tooling. Please open an issue if you are an open-source contributor \
-in need of code generation. If you are a Bloomberg developer, please rerun this \
+in need of code generation. If you are a BNP Paribas developer, please rerun this \
 script with the CODEGEN enviornment variable set to the internal codegen tool." >&2
     exit 1
   fi

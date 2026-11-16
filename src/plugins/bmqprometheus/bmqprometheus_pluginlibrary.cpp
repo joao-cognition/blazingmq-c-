@@ -23,7 +23,7 @@
 #include <bsl_sstream.h>
 #include <bslma_default.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqprometheus {
 
 // -------------------

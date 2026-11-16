@@ -23,9 +23,9 @@
 
 #include <bdlma_localsequentialallocator.h>
 
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 using namespace bsl;
-using namespace BloombergLP::bmqeval;
+using namespace BNP_Paribas::bmqeval;
 
 extern "C" int LLVMFuzzerTestOneInput(const uint8_t* data, size_t size)
 {

@@ -47,7 +47,7 @@
 #include <bsl_cstddef.h>
 
 // CONVENIENCE
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 using namespace bsl;
 
 //=============================================================================

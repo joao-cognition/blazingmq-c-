@@ -36,7 +36,7 @@
 // and one and exactly one client; however, an 'mqbi::Queue' may have multiple
 // 'mqbi::QueueHandle'.  The 'mqbi::QueueHandle' is implemented in
 // 'mbqblp::QueueHandle', while the 'mqbi::Queue' interface should be
-// implemented by the plugins mechanism.  In the Bloomberg in-house
+// implemented by the plugins mechanism.  In the BNP Paribas in-house
 // implementation of a MQ, the 'mqbi::Queue' implementation will be responsible
 // for saving data in a storage and communicating with other brokers from the
 // cluster.  Note that implementation of a 'mqbi::Queue' should use the
@@ -72,7 +72,7 @@
 #include <bsls_atomic.h>
 #include <bsls_types.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 // FORWARD DECLARATION
 namespace bmqt {

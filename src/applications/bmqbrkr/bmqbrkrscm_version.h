@@ -41,7 +41,7 @@
 // BDE
 #include <bsls_linkcoercion.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqbrkrscm {
 
 struct Version {

@@ -19,7 +19,7 @@
 #include <m_bmqstoragetool_printer.h>
 #include <m_bmqstoragetool_searchresultfactory.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace m_bmqstoragetool {
 
 // =========================

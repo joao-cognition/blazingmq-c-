@@ -49,7 +49,7 @@
 #include <bsl_vector.h>
 
 // CONVENIENCE
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 using namespace m_bmqstoragetool;
 using namespace bsl;
 using namespace mqbs;
@@ -311,7 +311,7 @@ MATCHER_P(SequenceNumberMatcher, expectedPSN, "")
 
 }  // close unnamed namespace
 
-namespace BloombergLP::m_bmqstoragetool {
+namespace BNP_Paribas::m_bmqstoragetool {
 
 // Printers for easier debugging. GMock will use these functions to log test
 // failures.

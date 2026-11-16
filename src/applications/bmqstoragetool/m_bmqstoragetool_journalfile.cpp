@@ -23,7 +23,7 @@
 #include <mqbs_offsetptr.h>
 #include <mqbu_messageguidutil.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 namespace m_bmqstoragetool {
 

@@ -47,7 +47,7 @@
 #include <bsl_vector.h>
 
 // CONVENIENCE
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 using namespace bsl;
 
 // Disable some compiler warning for simplified write of the 'MockSession'.

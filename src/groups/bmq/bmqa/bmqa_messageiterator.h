@@ -44,7 +44,7 @@
 // BDE
 #include <ball_log.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 // FORWARD DECLARATION
 namespace bmqimp {

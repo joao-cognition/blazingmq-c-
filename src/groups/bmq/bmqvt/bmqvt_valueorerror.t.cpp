@@ -28,7 +28,7 @@
 #include <bsl_type_traits.h>
 
 // CONVENIENCE
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 using namespace bsl;
 
 //=============================================================================

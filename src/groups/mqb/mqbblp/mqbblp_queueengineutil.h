@@ -47,7 +47,7 @@
 #include <bsl_vector.h>
 #include <bslma_allocator.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 // FORWARD DECLARATION
 namespace bdlbb {
@@ -951,6 +951,6 @@ QueueEngineUtil_ReleaseHandleProctor::result() const
 }
 
 }  // close namespace mqbblp
-}  // close namespace BloombergLP
+}  // close namespace BNP_Paribas
 
 #endif

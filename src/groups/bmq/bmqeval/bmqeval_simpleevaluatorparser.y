@@ -10,7 +10,7 @@
 %define api.token.constructor
 %define api.value.type variant
 %define parse.assert
-%define api.namespace { BloombergLP::bmqeval }
+%define api.namespace { BNP_Paribas::bmqeval }
 %code requires
 {
     #pragma clang diagnostic push
@@ -21,7 +21,7 @@
     #include <string>
     #include <bmqeval_simpleevaluator.h>
 
-    namespace BloombergLP {
+    namespace BNP_Paribas {
       namespace bmqeval {
         class SimpleEvaluatorScanner;
       }
@@ -41,7 +41,7 @@
     #include <bmqeval_simpleevaluatorscanner.h>
     #include <bmqeval_simpleevaluatorparser.hpp> // generated
 
-    using namespace BloombergLP::bmqeval;
+    using namespace BNP_Paribas::bmqeval;
 
     // yylex() arguments are defined in parser.y
     static SimpleEvaluatorParser::symbol_type yylex(SimpleEvaluatorScanner &scanner) {

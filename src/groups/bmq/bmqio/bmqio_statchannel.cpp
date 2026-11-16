@@ -27,7 +27,7 @@
 #include <bslmt_lockguard.h>
 #include <bsls_performancehint.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqio {
 
 // -----------------------

@@ -39,7 +39,7 @@
 #include <bslma_default.h>
 #include <bslmf_assert.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqp {
 
 namespace {

@@ -17,7 +17,7 @@
 
 #include <bmqscm_version.h>
 #include <bsl_memory.h>
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqio {
 
 // --------------------------------

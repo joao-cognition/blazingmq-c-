@@ -30,7 +30,7 @@
 // BDE
 #include <bsl_iostream.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbcmd {
 
 // ==================

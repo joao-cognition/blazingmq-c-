@@ -16,7 +16,7 @@
 #include <mqbs_filestoretestutil.h>
 
 #include <mqbscm_version.h>
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbs {
 
 }  // close package namespace

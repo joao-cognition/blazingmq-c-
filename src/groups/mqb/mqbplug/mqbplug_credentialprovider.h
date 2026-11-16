@@ -43,7 +43,7 @@
 #include <bsl_string_view.h>
 #include <bslma_managedptr.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbplug {
 
 // ========================

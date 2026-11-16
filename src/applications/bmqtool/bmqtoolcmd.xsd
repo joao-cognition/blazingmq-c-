@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <schema xmlns='http://www.w3.org/2001/XMLSchema'
-        xmlns:bdem='http://bloomberg.com/schemas/bdem'
-        xmlns:tns='http://bloomberg.com/schemas/bmqtoolcmd'
-        targetNamespace='http://bloomberg.com/schemas/bmqtoolcmd'
+        xmlns:bdem='http://bnpparibas.com/schemas/bdem'
+        xmlns:tns='http://bnpparibas.com/schemas/bmqtoolcmd'
+        targetNamespace='http://bnpparibas.com/schemas/bmqtoolcmd'
         bdem:package='m_bmqtool_cmd'
         elementFormDefault='qualified'>
 

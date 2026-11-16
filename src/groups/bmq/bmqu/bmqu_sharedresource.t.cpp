@@ -34,7 +34,7 @@
 #include <bsls_timeinterval.h>
 
 // CONVENIENCE
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 
 // ============================================================================
 //                            USAGE EXAMPLE

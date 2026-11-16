@@ -49,7 +49,7 @@
 #include <bslmf_nestedtraitdeclaration.h>
 #include <bsls_unspecifiedbool.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqa {
 
 // ======================

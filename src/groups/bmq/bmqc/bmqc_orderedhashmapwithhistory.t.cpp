@@ -25,7 +25,7 @@
 #include <bsl_iostream.h>
 
 // CONVENIENCE
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 using namespace bsl;
 
 typedef bmqc::OrderedHashMapWithHistory<size_t, size_t> ObjectUnderTest;

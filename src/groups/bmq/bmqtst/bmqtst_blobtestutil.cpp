@@ -22,7 +22,7 @@
 #include <bsl_memory.h>
 #include <bsls_assert.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqtst {
 
 // -------------------

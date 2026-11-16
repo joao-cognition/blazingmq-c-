@@ -33,7 +33,7 @@
 #include <bsl_functional.h>
 #include <ntsa_ipaddress.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqio {
 
 // ==================

@@ -32,7 +32,7 @@
 #include <bsl_ostream.h>
 #include <bslma_managedptr.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace m_bmqstoragetool {
 
 // =============================

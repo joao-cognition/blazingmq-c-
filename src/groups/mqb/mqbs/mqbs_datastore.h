@@ -71,7 +71,7 @@
 #include <bsls_systemclocktype.h>
 #include <bsls_types.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 // FORWARD DECLARATIONS
 namespace bdlmt {

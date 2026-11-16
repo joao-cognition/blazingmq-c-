@@ -28,7 +28,7 @@
 #include <bsl_cstring.h>
 #include <bsl_memory.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace m_bmqtool {
 
 namespace {

@@ -26,7 +26,7 @@
 // MQB
 #include <mqbc_partitionstatetable.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 namespace mqbc {
 

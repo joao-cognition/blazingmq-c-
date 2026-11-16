@@ -55,7 +55,7 @@
 #include <bsls_atomic.h>
 #include <bsls_types.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 namespace bmqimp {
 

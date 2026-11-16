@@ -145,7 +145,7 @@
 #include <bsls_assert.h>
 #include <bsls_cpp11.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 namespace mqbblp {
 
@@ -723,6 +723,6 @@ TimeControlledQueueEngineTester::confirm(const bsl::string&       clientText,
 }
 
 }  // close namespace mqbblp
-}  // close namespace BloombergLP
+}  // close namespace BNP_Paribas
 
 #endif

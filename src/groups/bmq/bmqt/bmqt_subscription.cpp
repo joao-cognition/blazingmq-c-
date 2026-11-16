@@ -24,7 +24,7 @@
 #include <bslma_default.h>
 #include <bslmt_once.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqt {
 
 // ------------------

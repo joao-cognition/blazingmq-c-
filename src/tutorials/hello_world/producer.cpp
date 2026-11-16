@@ -44,7 +44,7 @@
 #include <bsl_vector.h>
 #include <bsla_annotations.h>
 
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 
 namespace {
 typedef bsl::vector<bsl::string> TestMessages;

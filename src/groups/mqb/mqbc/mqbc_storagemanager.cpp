@@ -53,7 +53,7 @@
 #include <bslmt_once.h>
 #include <bsls_performancehint.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbc {
 
 namespace {

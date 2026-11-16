@@ -25,16 +25,16 @@ function(bmq_setup_doxygen)
   # Each CMake variable `DOXYGEN_something` becomes a Doxygen configuration
   # named `something`.
   set(DOXYGEN_ALIASES
-    "bbref{1}=@ref BloombergLP::\\1 \\\"\\1\\\""
+    "bbref{1}=@ref BNP_Paribas::\\1 \\\"\\1\\\""
   )
   set(DOXYGEN_EXTRACT_ALL            YES)
   set(DOXYGEN_EXTRACT_STATIC         YES)
   set(DOXYGEN_EXCLUDE_PATTERNS       *.t.cpp *.cpp)
   set(DOXYGEN_EXCLUDE_SYMBOLS
-    BloombergLP::bmqimp
-    BloombergLP::bmqp
-    BloombergLP::bslmt
-    BloombergLP::bmqst
+    BNP_Paribas::bmqimp
+    BNP_Paribas::bmqp
+    BNP_Paribas::bslmt
+    BNP_Paribas::bmqst
   )
   set(DOXYGEN_SHOW_INCLUDE_FILES     NO)
   set(DOXYGEN_SORT_MEMBER_DOCS       NO)
@@ -59,10 +59,12 @@ function(bmq_setup_doxygen)
   set(DOXYGEN_OUTPUT_DIRECTORY       apidocs)
   set(DOXYGEN_IMAGE_PATH             docs/assets/images)
   set(DOXYGEN_PROJECT_ICON           docs/favicon.ico)
-  set(DOXYGEN_PROJECT_LOGO           docs/assets/images/blazingmq_logo.svg)
+  set(DOXYGEN_PROJECT_LOGO           docs/assets/images/bnp_blazingmq_logo_white.svg)
+  set(DOXYGEN_HTML_EXTRA_STYLESHEET  docs/assets/bnp-doxygen.css)
+  set(DOXYGEN_HTML_COLORSTYLE_HUE    153)
   set(DOXYGEN_PROJECT_NAME           libbmq)
   set(DOXYGEN_PROJECT_BRIEF
-    "C++ SDK for BlazingMQ clients and plugins"
+    "BNP Paribas BlazingMQ C++ SDK for clients and plugins"
   )
   set(DOXYGEN_REFERENCED_BY_RELATION YES)
   set(DOXYGEN_REFERENCES_RELATION    YES)

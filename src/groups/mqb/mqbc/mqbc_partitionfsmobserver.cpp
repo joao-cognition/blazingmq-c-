@@ -19,7 +19,7 @@
 // BDE
 #include <bsla_annotations.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbc {
 
 // --------------------------

@@ -29,7 +29,7 @@
 #include <bsl_ostream.h>
 
 // CONVENIENCE
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 
 /// A test implementation of the `bmqpi::DTContext` protocol.
 struct DTContextTestImp : public bsls::ProtocolTestImp<bmqpi::DTContext> {

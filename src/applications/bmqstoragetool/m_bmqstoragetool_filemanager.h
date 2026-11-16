@@ -52,7 +52,7 @@
 #include <mqbsl_ledger.h>
 #include <mqbsl_memorymappedondisklog.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace m_bmqstoragetool {
 
 class FileManager {

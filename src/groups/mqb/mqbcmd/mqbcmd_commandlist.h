@@ -23,7 +23,7 @@
 /// This component provides a namespace, @bbref{mqbcmd::CommandList},
 /// containing all of the broker commands and their description.
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbcmd {
 
 // FORWARD DECLARATION

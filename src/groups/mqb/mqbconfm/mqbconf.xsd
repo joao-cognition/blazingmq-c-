@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <schema xmlns              = 'http://www.w3.org/2001/XMLSchema'
-        xmlns:bdem         = 'http://bloomberg.com/schemas/bdem'
-        xmlns:mqbconfm     = 'urn:x-bloomberg-com:mqbconfm'
-        targetNamespace    = 'urn:x-bloomberg-com:mqbconfm'
+        xmlns:bdem         = 'http://bnpparibas.com/schemas/bdem'
+        xmlns:mqbconfm     = 'urn:x-bnpparibas-com:mqbconfm'
+        targetNamespace    = 'urn:x-bnpparibas-com:mqbconfm'
         bdem:package       = 'mqbconfm'
         elementFormDefault = 'qualified'>
 
@@ -41,7 +41,7 @@
   <complexType name='Domain'>
     <annotation>
       <documentation>
-        Configuration for a Domain using the custom Bloomberg Domain.
+        Configuration for a Domain using the custom BNP Paribas Domain.
 
         name................: name of this domain
         mode................: mode of the queues in this domain

@@ -190,7 +190,7 @@
 //  // Any additional includes required by the test driver
 //
 //  // CONVENIENCE
-//  using namespace BloombergLP;
+//  using namespace BNP_Paribas;
 //
 //  // ========================================================================
 //  //                                  TESTS
@@ -239,7 +239,7 @@
 //  // Any additional includes required by the test driver
 //
 //  // CONVENIENCE
-//  using namespace BloombergLP;
+//  using namespace BNP_Paribas;
 //
 //  // ========================================================================
 //  //                                  TESTS
@@ -351,7 +351,7 @@
                << ") " #OP " '" << yStr << "' (" << bmqtst::printer(yResult)  \
                << ")" << bsl::ends;                                           \
             bsl::string_view str(buffer.data(), buffer.length());             \
-            BloombergLP::_assert(false, str.data(), file, line);              \
+            BNP_Paribas::_assert(false, str.data(), file, line);              \
         }                                                                     \
     }
 
@@ -392,7 +392,7 @@
         _os << D << '\0';                                                     \
         bsl::string_view _osStr(_buf.data(), _buf.length());                  \
         if (!(X)) {                                                           \
-            BloombergLP::_assert(false, _osStr.data(), __FILE__, __LINE__);   \
+            BNP_Paribas::_assert(false, _osStr.data(), __FILE__, __LINE__);   \
         }                                                                     \
     }
 #define BMQTST_ASSERT_EQ_D(D, X, Y)                                           \
@@ -691,15 +691,15 @@
             test.TearDown();                                                  \
         }                                                                     \
                                                                               \
-        static ::BloombergLP::bmqtst::TestHelper_Test s_testItem;             \
+        static ::BNP_Paribas::bmqtst::TestHelper_Test s_testItem;             \
     };                                                                        \
                                                                               \
-    ::BloombergLP::bmqtst::TestHelper_Test FIXTURE##NAME ::s_testItem(        \
+    ::BNP_Paribas::bmqtst::TestHelper_Test FIXTURE##NAME ::s_testItem(        \
         FIXTURE##NAME ::run);                                                 \
     void FIXTURE##NAME ::body()
 
 #define BMQTST_TEST(NAME)                                                     \
-    struct Test##NAME : ::BloombergLP::bmqtst::Test {                         \
+    struct Test##NAME : ::BNP_Paribas::bmqtst::Test {                         \
         void body() BSLS_KEYWORD_OVERRIDE;                                    \
                                                                               \
         static void run()                                                     \
@@ -711,10 +711,10 @@
             test.TearDown();                                                  \
         }                                                                     \
                                                                               \
-        static ::BloombergLP::bmqtst::TestHelper_Test s_testItem;             \
+        static ::BNP_Paribas::bmqtst::TestHelper_Test s_testItem;             \
     };                                                                        \
                                                                               \
-    ::BloombergLP::bmqtst::TestHelper_Test Test##NAME ::s_testItem(           \
+    ::BNP_Paribas::bmqtst::TestHelper_Test Test##NAME ::s_testItem(           \
         Test##NAME ::run);                                                    \
     void Test##NAME ::body()
 
@@ -735,7 +735,7 @@
 
 #endif  // BMQTST_BENCHMARK_ENABLED
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqtst {
 
 // FORWARD DECLARATION

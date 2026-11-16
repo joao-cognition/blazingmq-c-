@@ -48,7 +48,7 @@
 #include <bslma_managedptr.h>
 #include <bsls_types.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbsi {
 
 class LogConfig;

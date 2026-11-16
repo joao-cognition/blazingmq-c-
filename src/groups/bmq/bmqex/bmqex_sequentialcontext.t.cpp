@@ -32,7 +32,7 @@
 #include <bsls_assert.h>
 
 // CONVENIENCE
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 
 // ============================================================================
 //                            TEST HELPERS UTILITY

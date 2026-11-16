@@ -77,7 +77,7 @@
 #include <bsls_systemclocktype.h>
 #include <bsls_timeinterval.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqba {
 
 namespace {
@@ -922,7 +922,7 @@ int Application::processCommand(const bsl::string& source,
     // turn off re-routing until all nodes have been upgraded to 93.7.
     //
     // Also, once reroute is re-enabled, revert the integration test changes
-    // introduced in https://github.com/bloomberg/blazingmq/pull/586.
+    // introduced in https://github.com/joao-cognition/blazingmq-c-/pull/586.
     const bool neverReroute = true;
 
     // Note that routed commands should never route again to another node.

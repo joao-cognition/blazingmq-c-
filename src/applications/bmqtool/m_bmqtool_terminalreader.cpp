@@ -25,7 +25,7 @@
 #include <termios.h>
 #include <unistd.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace m_bmqtool {
 
 namespace {

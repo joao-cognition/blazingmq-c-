@@ -63,7 +63,7 @@
 #include <bsls_systemtime.h>
 #include <bsls_types.h>
 
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 
 namespace {
 

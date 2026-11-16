@@ -28,7 +28,7 @@
 #include <bsl_ostream.h>
 
 // CONVENIENCE
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 
 /// A test implementation of the `bmqpi::DTTracer` protocol.
 struct DTTracerTestImp : public bsls::ProtocolTestImp<bmqpi::DTTracer> {

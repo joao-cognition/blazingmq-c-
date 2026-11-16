@@ -42,7 +42,7 @@
 #include <bsls_assert.h>
 #include <bsls_systemclocktype.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbmock {
 
 namespace {

@@ -84,7 +84,7 @@
 #include <bsls_types.h>
 #include <bslstl_stringref.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 // FORWARD DECLARATIONS
 namespace mqbcfg {

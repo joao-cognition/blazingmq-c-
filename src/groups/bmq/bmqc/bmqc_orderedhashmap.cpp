@@ -19,7 +19,7 @@
 // BDE
 #include <bsl_algorithm.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqc {
 
 // --------------------------------

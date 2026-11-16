@@ -90,7 +90,7 @@
 #include <bsls_exceptionutil.h>  // BSLS_NOTHROW_SPEC
 #include <bsls_keyword.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 namespace bmqex {
 

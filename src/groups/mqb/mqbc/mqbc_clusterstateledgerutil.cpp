@@ -51,7 +51,7 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbc {
 
 // -------------------------------

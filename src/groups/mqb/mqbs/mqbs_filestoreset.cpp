@@ -23,7 +23,7 @@
 #include <bsla_annotations.h>
 #include <bslim_printer.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbs {
 
 namespace {

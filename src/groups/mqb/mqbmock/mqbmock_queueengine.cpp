@@ -20,7 +20,7 @@
 #include <bsl_iostream.h>
 #include <bsla_annotations.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbmock {
 
 // -----------------

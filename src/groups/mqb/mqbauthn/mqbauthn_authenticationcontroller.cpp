@@ -42,7 +42,7 @@
 #include <bsl_vector.h>
 #include <bslmf_movableref.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbauthn {
 
 namespace {

@@ -27,7 +27,7 @@
 
 #include <bmqu_printutil.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbnet {
 
 // --------------------------

@@ -56,7 +56,7 @@
 #if !defined(yyFlexLexerOnce)
 #undef yyFlexLexer
 #define yyFlexLexer                                                           \
-    BloombergLP_bmqeval_simpleevaluator_FlexLexer  // the trick with prefix; no
+    BNP_Paribas_bmqeval_simpleevaluator_FlexLexer  // the trick with prefix; no
                                                    // namespace here :(
 #include <FlexLexer.h>
 #endif
@@ -70,7 +70,7 @@
 
 #include <bmqeval_simpleevaluatorparser.hpp>  // this is needed for symbol_type
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqeval {
 
 class SimpleEvaluatorScanner : public yyFlexLexer {

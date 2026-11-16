@@ -29,7 +29,7 @@
 #include <bsl_string.h>
 #endif
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 namespace bmqst {
 

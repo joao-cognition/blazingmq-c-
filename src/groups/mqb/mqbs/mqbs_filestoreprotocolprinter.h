@@ -45,7 +45,7 @@
 #include <bmqu_alignedprinter.h>
 #include <bmqu_memoutstream.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbs {
 
 // FREE FUNCTIONS

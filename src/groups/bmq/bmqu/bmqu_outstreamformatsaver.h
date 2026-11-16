@@ -112,7 +112,7 @@
 #include <bsl_iosfwd.h>
 #include <bsl_iostream.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqu {
 
 // ====================

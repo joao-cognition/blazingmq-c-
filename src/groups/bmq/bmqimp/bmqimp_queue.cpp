@@ -34,7 +34,7 @@
 #include <bslim_printer.h>
 #include <bslma_allocator.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqimp {
 
 namespace {

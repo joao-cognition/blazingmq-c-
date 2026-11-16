@@ -26,7 +26,7 @@
 #include <bsl_limits.h>
 #include <bsl_ostream.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqst {
 
 namespace {

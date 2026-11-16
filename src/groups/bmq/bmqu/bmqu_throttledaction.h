@@ -92,7 +92,7 @@
 #include <bsls_timeutil.h>
 #include <bsls_types.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqu {
 
 // ============================
@@ -159,7 +159,7 @@ struct ThrottledActionParams {
 #define BMQU_THROTTLEDACTION_THROTTLE_INTERNAL(P, ACTION, RESET)              \
     {                                                                         \
         const bsls::Types::Int64 _now =                                       \
-            BloombergLP::bsls::TimeUtil::getTimer();                          \
+            BNP_Paribas::bsls::TimeUtil::getTimer();                          \
                                                                               \
         if ((_now - P.d_lastResetTime) >= P.d_intervalNano) {                 \
             int                _numSkipped = P.d_countSinceLastReset;         \

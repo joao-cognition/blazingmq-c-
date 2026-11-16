@@ -28,7 +28,7 @@
 #include <bsl_string.h>
 #include <mqbs_datafileiterator.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace m_bmqstoragetool {
 
 // ===================

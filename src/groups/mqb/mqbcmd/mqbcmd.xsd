@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
-        xmlns:bdem="http://bloomberg.com/schemas/bdem"
-        xmlns:tns="http://bloomberg.com/schemas/schema"
+        xmlns:bdem="http://bnpparibas.com/schemas/bdem"
+        xmlns:tns="http://bnpparibas.com/schemas/schema"
         xmlns:xs="http://www.w3.org/2001/XMLSchema"
-        targetNamespace="http://bloomberg.com/schemas/schema">
+        targetNamespace="http://bnpparibas.com/schemas/schema">
 
   <complexType name="Command">
     <annotation>

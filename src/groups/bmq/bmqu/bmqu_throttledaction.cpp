@@ -19,7 +19,7 @@
 // BDE
 #include <bdlt_timeunitratio.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqu {
 
 // ----------------------------

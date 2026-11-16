@@ -20,7 +20,7 @@
 // MQB
 #include <mqbauthz_defaultauthorizer.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbauthz {
 
 // -------------------
