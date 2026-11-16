@@ -36,7 +36,7 @@
 #include <bsl_memory.h>
 #include <bsl_utility.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace m_bmqstoragetool {
 
 namespace {

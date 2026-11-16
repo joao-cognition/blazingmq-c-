@@ -35,7 +35,7 @@
 #include <bslma_managedptr.h>
 #include <bsls_assert.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbauthn {
 
 const char* BasicAuthenticator::k_NAME      = "BasicAuthenticator";

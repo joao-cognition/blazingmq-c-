@@ -27,7 +27,7 @@
 #include <bsl_limits.h>
 #include <bsls_performancehint.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbs {
 
 // -------------------------

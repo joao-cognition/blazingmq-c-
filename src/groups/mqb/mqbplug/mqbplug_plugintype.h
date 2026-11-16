@@ -30,7 +30,7 @@
 #include <bsl_ostream.h>
 #include <bsl_string.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbplug {
 
 // =================

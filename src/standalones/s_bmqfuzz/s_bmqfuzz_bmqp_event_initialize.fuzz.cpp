@@ -20,7 +20,7 @@
 #include <bdlbb_pooledblobbufferfactory.h>
 #include <bmqp_event.h>
 
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 
 extern "C" int LLVMFuzzerTestOneInput(const uint8_t* Data, size_t Size)
 {

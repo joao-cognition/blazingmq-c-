@@ -57,7 +57,7 @@
 #include "prometheus/gauge.h"
 #include "prometheus/labels.h"
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqprometheus {
 
 namespace {

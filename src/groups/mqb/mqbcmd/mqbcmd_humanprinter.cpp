@@ -41,7 +41,7 @@
 #include <bsls_assert.h>
 #include <bsls_types.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbcmd {
 
 namespace {
@@ -1430,7 +1430,7 @@ bsl::ostream&
 HumanPrinter::printResponses(bsl::ostream&            os,
                              const RouteResponseList& responseList)
 {
-    typedef bsl::vector<BloombergLP::mqbcmd::RouteResponse>
+    typedef bsl::vector<BNP_Paribas::mqbcmd::RouteResponse>
         RouteResponseVector;
 
     RouteResponseVector responses = responseList.responses();

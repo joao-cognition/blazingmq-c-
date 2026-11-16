@@ -30,7 +30,7 @@
 // 'bmqex::ExecutionPolicy' to specify the execution policy blocking
 // properties.
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqex {
 
 // ========================

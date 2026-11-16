@@ -38,7 +38,7 @@
 #include <bsl_vector.h>
 #include <bslma_managedptr.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 // FORWARD DECLARATIONS
 namespace mqbs {

@@ -43,13 +43,13 @@
 #define MOVE_INIT(OBJ, FIELD) FIELD(MOVE_FIELD(OBJ, FIELD))
 #define MOVE_INIT_ALLOC(OBJ, FIELD, ALLOC) FIELD(MOVE_FIELD(OBJ, FIELD), ALLOC)
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbauthz {
 
 namespace {
 
-typedef bsl::unordered_map<BloombergLP::mqbpoly::Identity,
-                           BloombergLP::mqbauthz::Policy_Permission>
+typedef bsl::unordered_map<BNP_Paribas::mqbpoly::Identity,
+                           BNP_Paribas::mqbauthz::Policy_Permission>
     RoleMap;
 
 struct ContainsRole {
@@ -560,4 +560,4 @@ Policy::allocator_type Policy::get_allocator() const
 }
 
 }  // namespace mqbauthz
-}  // namespace BloombergLP
+}  // namespace BNP_Paribas

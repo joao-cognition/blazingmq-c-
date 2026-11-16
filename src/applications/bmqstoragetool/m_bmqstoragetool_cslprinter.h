@@ -32,7 +32,7 @@
 #include <mqbc_clusterstateledgerprotocol.h>
 #include <mqbsi_ledger.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 namespace m_bmqstoragetool {
 

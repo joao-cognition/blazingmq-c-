@@ -22,7 +22,7 @@
 #include <bslmf_allocatorargt.h>
 #include <bsls_alignedbuffer.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqst {
 
 namespace {

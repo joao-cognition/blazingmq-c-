@@ -103,7 +103,7 @@
 #include <ntsa_error.h>
 #include <ntsa_ipaddress.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbnet {
 
 const char* TCPSessionFactory::k_CHANNEL_PROPERTY_PEER_IP = "tcp.peer.ip";

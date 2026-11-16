@@ -41,7 +41,7 @@
 #include <bslmf_nestedtraitdeclaration.h>
 #include <bsls_types.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 // FORWARD DECLARATION
 namespace bmqimp {

@@ -31,7 +31,7 @@
 // BDE
 #include <bsl_memory.h>  // bsl::shared_ptr
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 // FORWARD DECLARATIONS
 namespace mqbi {

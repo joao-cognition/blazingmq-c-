@@ -20,7 +20,7 @@
 #include <bdlb_print.h>
 #include <bdlb_string.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqio {
 
 // ---------------------------

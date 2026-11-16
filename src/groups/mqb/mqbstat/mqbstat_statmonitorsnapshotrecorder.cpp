@@ -27,7 +27,7 @@
 #include <bsla_annotations.h>
 #include <bslma_default.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbstat {
 
 namespace {

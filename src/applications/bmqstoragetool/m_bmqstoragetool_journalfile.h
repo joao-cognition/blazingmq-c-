@@ -35,7 +35,7 @@
 #include <bsl_vector.h>
 #include <bslstl_pair.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 namespace m_bmqstoragetool {
 

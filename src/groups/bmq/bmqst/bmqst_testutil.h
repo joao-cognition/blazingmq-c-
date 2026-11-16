@@ -308,7 +308,7 @@
 //                                UTILITIES
 //-----------------------------------------------------------------------------
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqst {
 
 // ===============

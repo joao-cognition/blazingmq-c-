@@ -45,7 +45,7 @@
 #include <bsl_unordered_set.h>
 #include <bslma_managedptr.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 // FORWARD DECLARATION
 namespace mqbnet {

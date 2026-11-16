@@ -28,7 +28,7 @@
 // BMQ
 #include <bmqp_ctrlmsg_messages.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbnet {
 
 // ========================

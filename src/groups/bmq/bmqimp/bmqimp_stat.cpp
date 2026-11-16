@@ -19,7 +19,7 @@
 
 #include <bmqst_tableutil.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqimp {
 
 // -----------

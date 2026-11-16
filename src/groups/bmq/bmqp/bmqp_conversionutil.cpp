@@ -20,7 +20,7 @@
 // BMQ
 #include <bmqp_queueid.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqp {
 
 // ---------------------

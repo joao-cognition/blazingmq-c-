@@ -29,7 +29,7 @@
 #include <bsl_iostream.h>
 #include <bslma_managedptr.h>
 
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 using namespace m_bmqstoragetool;
 
 static bool

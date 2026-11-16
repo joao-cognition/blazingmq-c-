@@ -35,7 +35,7 @@
 #include <bmqtst_testhelper.h>
 
 // CONVENIENCE
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 using namespace bsl;
 
 // ============================================================================
@@ -200,7 +200,7 @@ static void runPerformanceTest(bmqtst::Table* table,
 
 // Check that all member functions can be instantiated.
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqc {
 
 template class MonitoredQueue<bdlcc::SingleConsumerQueue<int> >;

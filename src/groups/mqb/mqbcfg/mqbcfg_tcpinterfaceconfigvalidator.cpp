@@ -25,7 +25,7 @@ BSLS_IDENT_RCSID(mqbcfg_tcpinterfaceconfigvalidator_h, "$Id$ $CSID$")
 #include <bsl_type_traits.h>
 #include <bsl_vector.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbcfg {
 
 namespace {
@@ -106,4 +106,4 @@ TcpInterfaceConfigValidator::ErrorCode TcpInterfaceConfigValidator::operator()(
 }
 
 }  // close namespace mqbcfg
-}  // close namespace BloombergLP
+}  // close namespace BNP_Paribas

@@ -45,10 +45,10 @@ if [ ! -d "${DIR_THIRDPARTY}/bde-tools" ]; then
     git clone --depth 1 --branch 4.39.0.0 https://github.com/bloomberg/bde-tools "${DIR_THIRDPARTY}/bde-tools"
 fi
 if [ ! -d "${DIR_THIRDPARTY}/bde" ]; then
-    git clone --depth 1 --branch 4.39.0.0 https://github.com/bloomberg/bde.git "${DIR_THIRDPARTY}/bde"
+    git clone --depth 1 --branch main https://github.com/joao-cognition/bde-c-.git "${DIR_THIRDPARTY}/bde"
 fi
 if [ ! -d "${DIR_THIRDPARTY}/ntf-core" ]; then
-    git clone --depth 1 --branch 2.6.13 https://github.com/bloomberg/ntf-core.git "${DIR_THIRDPARTY}/ntf-core"
+    git clone --depth 1 --branch main https://github.com/joao-cognition/ntf-core-c-.git "${DIR_THIRDPARTY}/ntf-core"
 fi
 
 # :: Install required packages ::::::::::::::::::::::::::::::::::::::::::::::::

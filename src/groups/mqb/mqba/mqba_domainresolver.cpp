@@ -42,7 +42,7 @@
 #include <bslmt_lockguard.h>
 #include <bslmt_mutexassert.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqba {
 
 namespace {

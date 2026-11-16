@@ -60,7 +60,7 @@
 #include <bsl_utility.h>
 #include <bslma_managedptr.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbc {
 
 namespace {

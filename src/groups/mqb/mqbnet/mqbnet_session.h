@@ -34,7 +34,7 @@
 #include <bsl_string_view.h>
 #include <bsls_timeinterval.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 // FORWARD DECLARATION
 namespace bmqp {

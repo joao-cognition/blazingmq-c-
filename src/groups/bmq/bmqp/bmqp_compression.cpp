@@ -35,7 +35,7 @@
 #endif
 #include <bsl_memory.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqp {
 
 namespace {

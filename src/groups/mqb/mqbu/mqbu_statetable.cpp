@@ -16,7 +16,7 @@
 #include <mqbu_statetable.h>
 
 #include <mqbscm_version.h>
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbu {
 
 }  // close package namespace

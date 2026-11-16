@@ -26,7 +26,7 @@
 #include <bsls_assert.h>
 #include <bsls_objectbuffer.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbcfg {
 
 namespace {

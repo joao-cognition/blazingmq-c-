@@ -48,7 +48,7 @@
 #include <bsls_platform.h>
 #include <bsls_timeinterval.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 // FORWARD DECLARE
 namespace mqbc {

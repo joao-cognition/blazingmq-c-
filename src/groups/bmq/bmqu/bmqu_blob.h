@@ -34,7 +34,7 @@
 #include <bdlbb_blob.h>
 #include <bsl_iostream.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqu {
 
 // ==================

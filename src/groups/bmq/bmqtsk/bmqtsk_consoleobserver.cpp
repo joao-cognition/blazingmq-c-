@@ -37,7 +37,7 @@
 // SYSTEM
 #include <unistd.h>  // for tty detection
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqtsk {
 
 namespace {

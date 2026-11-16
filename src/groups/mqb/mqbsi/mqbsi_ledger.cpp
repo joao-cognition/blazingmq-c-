@@ -22,7 +22,7 @@
 #include <bslim_printer.h>
 #include <bslmf_allocatorargt.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbsi {
 
 // --------------------

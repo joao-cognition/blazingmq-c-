@@ -60,7 +60,7 @@
 #pragma pop_macro("TEST_F")
 #pragma pop_macro("TEST")
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 namespace m_bmqstoragetool {
 

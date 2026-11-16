@@ -502,7 +502,7 @@
 #include <bslmt_mutex.h>
 #include <bsls_spinlock.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 namespace bmqstm {
 class StatContextUpdate;

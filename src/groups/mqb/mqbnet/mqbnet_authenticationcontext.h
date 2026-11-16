@@ -41,7 +41,7 @@
 #include <bslma_allocator.h>
 #include <bslmt_mutex.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 // FORWARD DECLARATION
 namespace bmqio {

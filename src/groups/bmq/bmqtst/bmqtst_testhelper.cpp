@@ -21,7 +21,7 @@
 #include <bsl_limits.h>
 #include <bslma_testallocator.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqtst {
 
 namespace {

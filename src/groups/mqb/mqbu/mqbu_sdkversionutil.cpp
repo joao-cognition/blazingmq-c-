@@ -26,7 +26,7 @@
 // BDE
 #include <bslmf_assert.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbu {
 
 namespace {

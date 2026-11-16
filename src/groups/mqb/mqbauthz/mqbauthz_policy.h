@@ -157,7 +157,7 @@
 #include <bsla_nodiscard.h>
 #include <bslmf_movableref.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 namespace bmqt {
 class Uri;
@@ -329,6 +329,6 @@ class Policy {
 };
 
 }  // namespace mqbauthz
-}  // namespace BloombergLP
+}  // namespace BNP_Paribas
 
 #endif  // INCLUDED_MQBAUTHZ_POLICY

@@ -22,7 +22,7 @@
 #include <bslim_printer.h>
 #include <bslmf_assert.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbs {
 
 namespace {

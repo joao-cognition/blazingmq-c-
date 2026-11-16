@@ -329,15 +329,15 @@ use a [virtual environment](https://docs.python.org/3.8/tutorial/venv.html).
 
 The IT suite uses two directories:
 
-- The [blazingmq/src/integration-tests](https://github.com/bloomberg/blazingmq/tree/main/src/integration-tests).
+- The [blazingmq/src/integration-tests](https://github.com/joao-cognition/blazingmq-c-/tree/main/src/integration-tests).
   It contains integration test scenarios.
 
-- The [blazingmq/src/python](https://github.com/bloomberg/blazingmq/tree/main/src/python).
+- The [blazingmq/src/python](https://github.com/joao-cognition/blazingmq-c-/tree/main/src/python).
   The path that should be used as a python root when running ITs.
 
 ### Invoking `pytest`
 
-The [`src/integration-tests/run-tests`](https://github.com/bloomberg/blazingmq/blob/main/src/integration-tests/run-tests)
+The [`src/integration-tests/run-tests`](https://github.com/joao-cognition/blazingmq-c-/blob/main/src/integration-tests/run-tests)
 script should be used to run the test suite.  See the usage notes in the comments.
 Invoking `pytest` directly is not recommended.
 

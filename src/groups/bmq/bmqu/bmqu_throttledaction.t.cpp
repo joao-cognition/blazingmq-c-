@@ -30,7 +30,7 @@
 #include <bmqtst_testhelper.h>
 
 // CONVENIENCE
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 using namespace bsl;
 
 // ============================================================================
@@ -187,9 +187,9 @@ static void test2_throttleNoReset()
 
     // 3. Wait until the specified time interval elapses (as determined by
     //   'bsls::TimeUtil::getTimer') and repeat steps 1-2 above.
-    bsls::Types::Int64 now = BloombergLP::bsls::TimeUtil::getTimer();
+    bsls::Types::Int64 now = BNP_Paribas::bsls::TimeUtil::getTimer();
     while ((now - obj.d_lastResetTime) < obj.d_intervalNano) {
-        now = BloombergLP::bsls::TimeUtil::getTimer();
+        now = BNP_Paribas::bsls::TimeUtil::getTimer();
     }
 
     // Do a 'BMQU_THROTTLEDACTION_THROTTLE_NO_RESET' up to and including the
@@ -313,9 +313,9 @@ static void test3_throttleWithDefaultReset()
 
     // 3. Wait until the specified time interval elapses (as determined by
     //   'bsls::TimeUtil::getTimer') and repeat steps 1-2 above.
-    bsls::Types::Int64 now = BloombergLP::bsls::TimeUtil::getTimer();
+    bsls::Types::Int64 now = BNP_Paribas::bsls::TimeUtil::getTimer();
     while ((now - obj.d_lastResetTime) < obj.d_intervalNano) {
-        now = BloombergLP::bsls::TimeUtil::getTimer();
+        now = BNP_Paribas::bsls::TimeUtil::getTimer();
     }
 
     // Do a 'BMQU_THROTTLEDACTION_THROTTLE' up to and including the maximum
@@ -448,9 +448,9 @@ static void test4_throttleWithCustomReset()
     // 3. Wait until the specified time interval elapses (as determined by
     //    'bsls::TimeUtil::getTimer') and repeat steps 1-2 above.  While doing
     //    doing so, ensure that the custom reset action was properly performed.
-    bsls::Types::Int64 now = BloombergLP::bsls::TimeUtil::getTimer();
+    bsls::Types::Int64 now = BNP_Paribas::bsls::TimeUtil::getTimer();
     while ((now - obj.d_lastResetTime) < obj.d_intervalNano) {
-        now = BloombergLP::bsls::TimeUtil::getTimer();
+        now = BNP_Paribas::bsls::TimeUtil::getTimer();
     }
 
     // 1. Do a 'BMQU_THROTTLEDACTION_THROTTLE_WITH_RESET' up to and including

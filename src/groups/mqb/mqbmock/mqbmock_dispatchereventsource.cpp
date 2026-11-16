@@ -34,7 +34,7 @@
 // BDE
 #include <bslma_default.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbmock {
 
 // --------------------------

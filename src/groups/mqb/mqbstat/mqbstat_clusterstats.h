@@ -47,7 +47,7 @@
 #include <bsls_cpp11.h>
 #include <bsls_types.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 namespace mqbstat {
 

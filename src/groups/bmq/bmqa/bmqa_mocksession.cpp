@@ -58,7 +58,7 @@
 #include <bslmt_qlock.h>
 #include <bsls_platform.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqa {
 
 namespace {

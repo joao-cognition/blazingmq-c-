@@ -35,7 +35,7 @@
 // SYS
 #include <sys/mman.h>  // for msync
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbsl {
 
 namespace {

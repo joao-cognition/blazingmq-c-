@@ -34,7 +34,7 @@
 #include <bsls_compilerfeatures.h>
 #include <bslstl_inplace.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 // FORWARD DECLARATION
 

@@ -22,7 +22,7 @@
 // BDE
 #include <bdlf_memfn.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqtst {
 
 // --------------

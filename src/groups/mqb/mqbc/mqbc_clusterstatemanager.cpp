@@ -41,7 +41,7 @@
 #include <bsla_maybeunused.h>
 #include <bsls_assert.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbc {
 
 namespace {

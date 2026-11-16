@@ -45,7 +45,7 @@
 #include <bsl_vector.h>
 #include <bslma_allocator.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace m_bmqstoragetool {
 
 // =======================

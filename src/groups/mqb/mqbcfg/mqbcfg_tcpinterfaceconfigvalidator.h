@@ -29,7 +29,7 @@ BSLS_IDENT_PRAGMA_ONCE
 /// @brief This component provdies a class to validate `TcpInterfaceConfig`
 ///        settings in the broker config.
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbcfg {
 
 /// This class is a predicate object that validates the
@@ -78,5 +78,5 @@ class TcpInterfaceConfigValidator {
 // ============================================================================
 
 }  // close namespace mqbcfg
-}  // close namespace BloombergLP
+}  // close namespace BNP_Paribas
 #endif

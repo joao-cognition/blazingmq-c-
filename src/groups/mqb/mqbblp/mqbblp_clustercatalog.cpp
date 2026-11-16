@@ -48,7 +48,7 @@
 #include <bslmt_mutexassert.h>
 #include <bsls_systemclocktype.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbblp {
 
 // -----------------------------------------

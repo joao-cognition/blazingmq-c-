@@ -25,7 +25,7 @@
 #include <bmqu_blob.h>
 #include <bmqu_memoutstream.h>
 
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 
 /// @brief Fuzz `bmqp::OptionsView` over the options area in the specified
 /// `data` of the specified `size`.

@@ -51,7 +51,7 @@
 #include <bsls_types.h>
 #include <bslstl_stringref.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbblp {
 
 namespace {
@@ -1577,4 +1577,4 @@ bsl::string QueueEngineTester::getMessages(bsl::string messages,
 }
 
 }  // close namespace mqbblp
-}  // close namespace BloombergLP
+}  // close namespace BNP_Paribas

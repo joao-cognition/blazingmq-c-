@@ -20,7 +20,7 @@
 #include <bsl_cstddef.h>
 #include <bslma_sharedptroutofplacerep.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqu {
 
 namespace {

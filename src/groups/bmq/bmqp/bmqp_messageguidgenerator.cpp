@@ -47,7 +47,7 @@
 #include <ntsa_ipaddress.h>
 #include <ntsa_ipv4address.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqp {
 
 BALL_LOG_SET_NAMESPACE_CATEGORY("BMQP.MESSAGEGUIDGENERATOR");

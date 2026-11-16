@@ -16,7 +16,7 @@
 #include <mqbs_offsetptr.h>
 
 #include <mqbscm_version.h>
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbs {
 
 // ---------------

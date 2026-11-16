@@ -184,7 +184,7 @@
 #include <bsls_keyword.h>
 #include <bsls_util.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 namespace bmqu {
 

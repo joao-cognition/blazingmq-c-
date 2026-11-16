@@ -23,7 +23,7 @@
 #include <bsl_cstddef.h>  // for 'size_t'
 #include <bsl_ostream.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqt {
 
 // ---------------------

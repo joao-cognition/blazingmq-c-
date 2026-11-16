@@ -59,7 +59,7 @@
 #include <bslma_managedptr.h>
 #include <bslmf_referencewrapper.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 // FORWARD DECLARATION
 namespace mqbnet {

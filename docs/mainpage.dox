@@ -1,11 +1,10 @@
 /**
 
-\mainpage BlazingMQ C++ SDK API Documentation
+\mainpage BNP Paribas BlazingMQ C++ SDK API Documentation
 
 \image html blazingmq_logo_label.svg width=50%
 
-[BlazingMQ](https://bloomberg.github.io/blazingmq) is an open source
-distributed message queueing framework, which focuses on efficiency,
+BlazingMQ is the BNP Paribas distributed message queueing framework, which focuses on efficiency,
 reliability, and a rich feature set for modern-day workflows.
 
 At its core, BlazingMQ provides durable, fault-tolerant, highly performant, and

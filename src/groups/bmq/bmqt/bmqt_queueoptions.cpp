@@ -27,7 +27,7 @@
 #include <bslma_allocator.h>
 #include <bslma_default.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace {
 
 static void mergeSubscription(bmqt::Subscription*       to,

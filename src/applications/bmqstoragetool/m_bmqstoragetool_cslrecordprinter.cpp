@@ -16,7 +16,7 @@
 // bmqstoragetool
 #include <m_bmqstoragetool_cslrecordprinter.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace m_bmqstoragetool {
 
 }  // close package namespace

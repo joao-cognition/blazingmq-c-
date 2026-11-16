@@ -17,7 +17,7 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional
 
-__NAMESPACE__ = "http://bloomberg.com/schemas/mqbcfg"
+__NAMESPACE__ = "http://bnpparibas.com/schemas/mqbcfg"
 
 
 class AllocatorType(Enum):
@@ -33,7 +33,7 @@ class BmqconfConfig:
         metadata={
             "name": "cacheTTLSeconds",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -71,7 +71,7 @@ class ClusterAttributes:
         metadata={
             "name": "isCSLModeEnabled",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -80,7 +80,7 @@ class ClusterAttributes:
         metadata={
             "name": "isFSMWorkflow",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -89,7 +89,7 @@ class ClusterAttributes:
         metadata={
             "name": "doesFSMwriteQLIST",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -98,7 +98,7 @@ class ClusterAttributes:
         metadata={
             "name": "clusterFsmWatchdogTimeoutSec",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -107,7 +107,7 @@ class ClusterAttributes:
         metadata={
             "name": "clusterFsmWatchdogNumRetries",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -116,7 +116,7 @@ class ClusterAttributes:
         metadata={
             "name": "partitionFsmWatchdogTimeoutSec",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -125,7 +125,7 @@ class ClusterAttributes:
         metadata={
             "name": "partitionFsmWatchdogNumRetries",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -172,7 +172,7 @@ class ClusterMonitorConfig:
         metadata={
             "name": "maxTimeLeader",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -181,7 +181,7 @@ class ClusterMonitorConfig:
         metadata={
             "name": "maxTimeMaster",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -190,7 +190,7 @@ class ClusterMonitorConfig:
         metadata={
             "name": "maxTimeNode",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -199,7 +199,7 @@ class ClusterMonitorConfig:
         metadata={
             "name": "maxTimeFailover",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -208,7 +208,7 @@ class ClusterMonitorConfig:
         metadata={
             "name": "thresholdLeader",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -217,7 +217,7 @@ class ClusterMonitorConfig:
         metadata={
             "name": "thresholdMaster",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -226,7 +226,7 @@ class ClusterMonitorConfig:
         metadata={
             "name": "thresholdNode",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -235,7 +235,7 @@ class ClusterMonitorConfig:
         metadata={
             "name": "thresholdFailover",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -254,7 +254,7 @@ class Credential:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -262,7 +262,7 @@ class Credential:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -286,7 +286,7 @@ class DispatcherProcessorParameters:
         metadata={
             "name": "queueSize",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -295,7 +295,7 @@ class DispatcherProcessorParameters:
         metadata={
             "name": "queueSizeLowWatermark",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -304,7 +304,7 @@ class DispatcherProcessorParameters:
         metadata={
             "name": "queueSizeHighWatermark",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -355,7 +355,7 @@ class ElectorConfig:
         metadata={
             "name": "initialWaitTimeoutMs",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -364,7 +364,7 @@ class ElectorConfig:
         metadata={
             "name": "maxRandomWaitTimeoutMs",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -373,7 +373,7 @@ class ElectorConfig:
         metadata={
             "name": "scoutingResultTimeoutMs",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -382,7 +382,7 @@ class ElectorConfig:
         metadata={
             "name": "electionResultTimeoutMs",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -391,7 +391,7 @@ class ElectorConfig:
         metadata={
             "name": "heartbeatBroadcastPeriodMs",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -400,7 +400,7 @@ class ElectorConfig:
         metadata={
             "name": "heartbeatCheckPeriodMs",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -409,7 +409,7 @@ class ElectorConfig:
         metadata={
             "name": "heartbeatMissCount",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -417,7 +417,7 @@ class ElectorConfig:
         default=0,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -426,7 +426,7 @@ class ElectorConfig:
         metadata={
             "name": "leaderSyncDelayMs",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -464,7 +464,7 @@ class Heartbeat:
         default=0,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -473,7 +473,7 @@ class Heartbeat:
         metadata={
             "name": "downstreamBroker",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -482,7 +482,7 @@ class Heartbeat:
         metadata={
             "name": "upstreamBroker",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -491,7 +491,7 @@ class Heartbeat:
         metadata={
             "name": "clusterPeer",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -504,7 +504,7 @@ class LogDumpConfig:
         metadata={
             "name": "recordBufferSize",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -513,7 +513,7 @@ class LogDumpConfig:
         metadata={
             "name": "recordingLevel",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -522,7 +522,7 @@ class LogDumpConfig:
         metadata={
             "name": "triggerLevel",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -557,7 +557,7 @@ class MessagePropertiesV2:
         metadata={
             "name": "advertiseV2Support",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -566,7 +566,7 @@ class MessagePropertiesV2:
         metadata={
             "name": "minCppSdkVersion",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -575,7 +575,7 @@ class MessagePropertiesV2:
         metadata={
             "name": "minJavaSdkVersion",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -600,7 +600,7 @@ class MessageThrottleConfig:
         metadata={
             "name": "lowThreshold",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -609,7 +609,7 @@ class MessageThrottleConfig:
         metadata={
             "name": "highThreshold",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -618,7 +618,7 @@ class MessageThrottleConfig:
         metadata={
             "name": "lowInterval",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -627,7 +627,7 @@ class MessageThrottleConfig:
         metadata={
             "name": "highInterval",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -640,7 +640,7 @@ class PluginSettingValue:
         metadata={
             "name": "boolVal",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
         },
     )
     int_val: Optional[int] = field(
@@ -648,7 +648,7 @@ class PluginSettingValue:
         metadata={
             "name": "intVal",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
         },
     )
     long_val: Optional[int] = field(
@@ -656,7 +656,7 @@ class PluginSettingValue:
         metadata={
             "name": "longVal",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
         },
     )
     double_val: Optional[float] = field(
@@ -664,7 +664,7 @@ class PluginSettingValue:
         metadata={
             "name": "doubleVal",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
         },
     )
     string_val: Optional[str] = field(
@@ -672,7 +672,7 @@ class PluginSettingValue:
         metadata={
             "name": "stringVal",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
         },
     )
 
@@ -683,7 +683,7 @@ class Plugins:
         default_factory=list,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "min_occurs": 1,
         },
     )
@@ -691,7 +691,7 @@ class Plugins:
         default_factory=list,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "min_occurs": 1,
         },
     )
@@ -760,7 +760,7 @@ class QueueOperationsConfig:
         metadata={
             "name": "openTimeoutMs",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -769,7 +769,7 @@ class QueueOperationsConfig:
         metadata={
             "name": "configureTimeoutMs",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -778,7 +778,7 @@ class QueueOperationsConfig:
         metadata={
             "name": "closeTimeoutMs",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -787,7 +787,7 @@ class QueueOperationsConfig:
         metadata={
             "name": "reopenTimeoutMs",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -796,7 +796,7 @@ class QueueOperationsConfig:
         metadata={
             "name": "reopenRetryIntervalMs",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -805,7 +805,7 @@ class QueueOperationsConfig:
         metadata={
             "name": "reopenMaxAttempts",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -814,7 +814,7 @@ class QueueOperationsConfig:
         metadata={
             "name": "assignmentTimeoutMs",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -823,7 +823,7 @@ class QueueOperationsConfig:
         metadata={
             "name": "keepaliveDurationMs",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -832,7 +832,7 @@ class QueueOperationsConfig:
         metadata={
             "name": "consumptionMonitorPeriodMs",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -841,7 +841,7 @@ class QueueOperationsConfig:
         metadata={
             "name": "stopTimeoutMs",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -850,7 +850,7 @@ class QueueOperationsConfig:
         metadata={
             "name": "shutdownTimeoutMs",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -859,7 +859,7 @@ class QueueOperationsConfig:
         metadata={
             "name": "ackWindowSize",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -879,7 +879,7 @@ class ResolvedDomain:
         metadata={
             "name": "resolvedName",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -888,7 +888,7 @@ class ResolvedDomain:
         metadata={
             "name": "clusterName",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -977,7 +977,7 @@ class StorageSyncConfig:
         metadata={
             "name": "startupRecoveryMaxDurationMs",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -986,7 +986,7 @@ class StorageSyncConfig:
         metadata={
             "name": "maxAttemptsStorageSync",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -995,7 +995,7 @@ class StorageSyncConfig:
         metadata={
             "name": "storageSyncReqTimeoutMs",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1004,7 +1004,7 @@ class StorageSyncConfig:
         metadata={
             "name": "masterSyncMaxDurationMs",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1013,7 +1013,7 @@ class StorageSyncConfig:
         metadata={
             "name": "partitionSyncStateReqTimeoutMs",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1022,7 +1022,7 @@ class StorageSyncConfig:
         metadata={
             "name": "partitionSyncDataReqTimeoutMs",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1031,7 +1031,7 @@ class StorageSyncConfig:
         metadata={
             "name": "startupWaitDurationMs",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1040,7 +1040,7 @@ class StorageSyncConfig:
         metadata={
             "name": "fileChunkSize",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1049,7 +1049,7 @@ class StorageSyncConfig:
         metadata={
             "name": "partitionSyncEventSize",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1061,7 +1061,7 @@ class SyslogConfig:
         default=False,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1070,7 +1070,7 @@ class SyslogConfig:
         metadata={
             "name": "appName",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1079,7 +1079,7 @@ class SyslogConfig:
         metadata={
             "name": "logFormat",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1087,7 +1087,7 @@ class SyslogConfig:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1104,7 +1104,7 @@ class TcpClusterNodeConnection:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1129,7 +1129,7 @@ class TcpInterfaceListener:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1137,7 +1137,7 @@ class TcpInterfaceListener:
         default="0.0.0.0",
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1145,7 +1145,7 @@ class TcpInterfaceListener:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1153,7 +1153,7 @@ class TcpInterfaceListener:
         default=False,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1180,7 +1180,7 @@ class TlsConfig:
         metadata={
             "name": "certificateAuthority",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1188,7 +1188,7 @@ class TlsConfig:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1196,7 +1196,7 @@ class TlsConfig:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1204,7 +1204,7 @@ class TlsConfig:
         default="TLSv1.3",
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1223,7 +1223,7 @@ class VirtualClusterInformation:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1232,7 +1232,7 @@ class VirtualClusterInformation:
         metadata={
             "name": "selfNodeId",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1255,14 +1255,14 @@ class AnonymousCredential:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
         },
     )
     credential: Optional[Credential] = field(
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
         },
     )
 
@@ -1279,7 +1279,7 @@ class ClusterNodeConnection:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1292,7 +1292,7 @@ class DispatcherProcessorConfig:
         metadata={
             "name": "numProcessors",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1301,7 +1301,7 @@ class DispatcherProcessorConfig:
         metadata={
             "name": "processorConfig",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1314,7 +1314,7 @@ class LogController:
         metadata={
             "name": "fileName",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1323,7 +1323,7 @@ class LogController:
         metadata={
             "name": "fileMaxAgeDays",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1332,7 +1332,7 @@ class LogController:
         metadata={
             "name": "rotationBytes",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1341,7 +1341,7 @@ class LogController:
         metadata={
             "name": "logfileFormat",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1350,7 +1350,7 @@ class LogController:
         metadata={
             "name": "consoleFormat",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1359,7 +1359,7 @@ class LogController:
         metadata={
             "name": "loggingVerbosity",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1368,7 +1368,7 @@ class LogController:
         metadata={
             "name": "bslsLogSeverityThreshold",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1377,7 +1377,7 @@ class LogController:
         metadata={
             "name": "consoleSeverityThreshold",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1385,7 +1385,7 @@ class LogController:
         default_factory=list,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "min_occurs": 1,
         },
     )
@@ -1393,7 +1393,7 @@ class LogController:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1402,7 +1402,7 @@ class LogController:
         metadata={
             "name": "logDump",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1436,7 +1436,7 @@ class PartitionConfig:
         metadata={
             "name": "numPartitions",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1444,7 +1444,7 @@ class PartitionConfig:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1453,7 +1453,7 @@ class PartitionConfig:
         metadata={
             "name": "archiveLocation",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1462,7 +1462,7 @@ class PartitionConfig:
         metadata={
             "name": "maxDataFileSize",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1471,7 +1471,7 @@ class PartitionConfig:
         metadata={
             "name": "maxJournalFileSize",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1480,7 +1480,7 @@ class PartitionConfig:
         metadata={
             "name": "maxQlistFileSize",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1489,7 +1489,7 @@ class PartitionConfig:
         metadata={
             "name": "maxCSLFileSize",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1497,7 +1497,7 @@ class PartitionConfig:
         default=False,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1506,7 +1506,7 @@ class PartitionConfig:
         metadata={
             "name": "maxArchivedFileSets",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1515,7 +1515,7 @@ class PartitionConfig:
         metadata={
             "name": "prefaultPages",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1524,7 +1524,7 @@ class PartitionConfig:
         metadata={
             "name": "flushAtShutdown",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1533,7 +1533,7 @@ class PartitionConfig:
         metadata={
             "name": "syncConfig",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1551,7 +1551,7 @@ class PluginSettingKeyValue:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1559,7 +1559,7 @@ class PluginSettingKeyValue:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1571,7 +1571,7 @@ class StatPluginConfigPrometheus:
         default=ExportMode.E_PULL,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1579,7 +1579,7 @@ class StatPluginConfigPrometheus:
         default="localhost",
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1587,7 +1587,7 @@ class StatPluginConfigPrometheus:
         default=8080,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1600,7 +1600,7 @@ class StatsPrinterConfig:
         metadata={
             "name": "printInterval",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1608,7 +1608,7 @@ class StatsPrinterConfig:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1617,7 +1617,7 @@ class StatsPrinterConfig:
         metadata={
             "name": "maxAgeDays",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1626,7 +1626,7 @@ class StatsPrinterConfig:
         metadata={
             "name": "rotateBytes",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1635,7 +1635,7 @@ class StatsPrinterConfig:
         metadata={
             "name": "rotateDays",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1643,7 +1643,7 @@ class StatsPrinterConfig:
         default=StatsPrinterEncodingFormat.TABLE_AND_JSON,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1675,7 +1675,7 @@ class TcpInterfaceConfig:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1683,7 +1683,7 @@ class TcpInterfaceConfig:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1692,7 +1692,7 @@ class TcpInterfaceConfig:
         metadata={
             "name": "ioThreads",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1701,7 +1701,7 @@ class TcpInterfaceConfig:
         metadata={
             "name": "maxConnections",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1710,7 +1710,7 @@ class TcpInterfaceConfig:
         metadata={
             "name": "lowWatermark",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1719,7 +1719,7 @@ class TcpInterfaceConfig:
         metadata={
             "name": "highWatermark",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1728,7 +1728,7 @@ class TcpInterfaceConfig:
         metadata={
             "name": "nodeLowWatermark",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1737,7 +1737,7 @@ class TcpInterfaceConfig:
         metadata={
             "name": "nodeHighWatermark",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1746,7 +1746,7 @@ class TcpInterfaceConfig:
         metadata={
             "name": "heartbeatIntervalMs",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1754,7 +1754,7 @@ class TcpInterfaceConfig:
         default_factory=list,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
         },
     )
 
@@ -1773,7 +1773,7 @@ class AuthenticatorPluginConfig:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1781,7 +1781,7 @@ class AuthenticatorPluginConfig:
         default_factory=list,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
         },
     )
 
@@ -1800,7 +1800,7 @@ class AuthorizerPluginConfig:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1808,7 +1808,7 @@ class AuthorizerPluginConfig:
         default_factory=list,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
         },
     )
 
@@ -1829,7 +1829,7 @@ class ClusterNode:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1837,7 +1837,7 @@ class ClusterNode:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1846,7 +1846,7 @@ class ClusterNode:
         metadata={
             "name": "dataCenter",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1854,7 +1854,7 @@ class ClusterNode:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1874,7 +1874,7 @@ class CredentialProviderConfig:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1882,7 +1882,7 @@ class CredentialProviderConfig:
         default_factory=list,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
         },
     )
 
@@ -1893,7 +1893,7 @@ class DispatcherConfig:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1901,7 +1901,7 @@ class DispatcherConfig:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1909,7 +1909,7 @@ class DispatcherConfig:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1918,7 +1918,7 @@ class DispatcherConfig:
         metadata={
             "name": "alarmTimeoutMs",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1927,7 +1927,7 @@ class DispatcherConfig:
         metadata={
             "name": "warningTimeoutMs",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1939,7 +1939,7 @@ class NetworkInterfaces:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1948,7 +1948,7 @@ class NetworkInterfaces:
         metadata={
             "name": "tcpInterface",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
         },
     )
 
@@ -1959,7 +1959,7 @@ class StatPluginConfig:
         default="",
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1968,7 +1968,7 @@ class StatPluginConfig:
         metadata={
             "name": "queueSize",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1977,7 +1977,7 @@ class StatPluginConfig:
         metadata={
             "name": "queueHighWatermark",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1986,7 +1986,7 @@ class StatPluginConfig:
         metadata={
             "name": "queueLowWatermark",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -1995,7 +1995,7 @@ class StatPluginConfig:
         metadata={
             "name": "publishInterval",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2004,7 +2004,7 @@ class StatPluginConfig:
         metadata={
             "name": "namespacePrefix",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2012,7 +2012,7 @@ class StatPluginConfig:
         default_factory=list,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "min_occurs": 1,
         },
     )
@@ -2021,7 +2021,7 @@ class StatPluginConfig:
         metadata={
             "name": "instanceId",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2030,7 +2030,7 @@ class StatPluginConfig:
         metadata={
             "name": "prometheusSpecific",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
         },
     )
 
@@ -2042,7 +2042,7 @@ class TaskConfig:
         metadata={
             "name": "allocatorType",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2051,7 +2051,7 @@ class TaskConfig:
         metadata={
             "name": "allocationLimit",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2060,7 +2060,7 @@ class TaskConfig:
         metadata={
             "name": "logController",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2094,7 +2094,7 @@ class AuthenticatorConfig:
         default_factory=list,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
         },
     )
     anonymous_credential: Optional[AnonymousCredential] = field(
@@ -2102,7 +2102,7 @@ class AuthenticatorConfig:
         metadata={
             "name": "anonymousCredential",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
         },
     )
     min_threads: int = field(
@@ -2110,7 +2110,7 @@ class AuthenticatorConfig:
         metadata={
             "name": "minThreads",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2119,7 +2119,7 @@ class AuthenticatorConfig:
         metadata={
             "name": "maxThreads",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2128,7 +2128,7 @@ class AuthenticatorConfig:
         metadata={
             "name": "credentialProvider",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
         },
     )
 
@@ -2145,7 +2145,7 @@ class AuthorizerConfig:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
         },
     )
 
@@ -2170,7 +2170,7 @@ class ClusterDefinition:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2178,7 +2178,7 @@ class ClusterDefinition:
         default_factory=list,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "min_occurs": 1,
         },
     )
@@ -2187,7 +2187,7 @@ class ClusterDefinition:
         metadata={
             "name": "partitionConfig",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2196,7 +2196,7 @@ class ClusterDefinition:
         metadata={
             "name": "masterAssignment",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2204,7 +2204,7 @@ class ClusterDefinition:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2213,7 +2213,7 @@ class ClusterDefinition:
         metadata={
             "name": "queueOperations",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2222,7 +2222,7 @@ class ClusterDefinition:
         metadata={
             "name": "clusterAttributes",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2231,7 +2231,7 @@ class ClusterDefinition:
         metadata={
             "name": "clusterMonitorConfig",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2240,7 +2240,7 @@ class ClusterDefinition:
         metadata={
             "name": "messageThrottleConfig",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2262,7 +2262,7 @@ class ClusterProxyDefinition:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2270,7 +2270,7 @@ class ClusterProxyDefinition:
         default_factory=list,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "min_occurs": 1,
         },
     )
@@ -2279,7 +2279,7 @@ class ClusterProxyDefinition:
         metadata={
             "name": "queueOperations",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2288,7 +2288,7 @@ class ClusterProxyDefinition:
         metadata={
             "name": "clusterMonitorConfig",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2297,7 +2297,7 @@ class ClusterProxyDefinition:
         metadata={
             "name": "messageThrottleConfig",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2310,7 +2310,7 @@ class StatsConfig:
         metadata={
             "name": "snapshotInterval",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2318,7 +2318,7 @@ class StatsConfig:
         default_factory=list,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "min_occurs": 1,
         },
     )
@@ -2326,7 +2326,7 @@ class StatsConfig:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2363,7 +2363,7 @@ class AppConfig:
         metadata={
             "name": "brokerInstanceName",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2372,7 +2372,7 @@ class AppConfig:
         metadata={
             "name": "brokerVersion",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2381,7 +2381,7 @@ class AppConfig:
         metadata={
             "name": "configVersion",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2390,7 +2390,7 @@ class AppConfig:
         metadata={
             "name": "etcDir",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2399,7 +2399,7 @@ class AppConfig:
         metadata={
             "name": "hostName",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2408,7 +2408,7 @@ class AppConfig:
         metadata={
             "name": "hostTags",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2417,7 +2417,7 @@ class AppConfig:
         metadata={
             "name": "hostDataCenter",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2426,7 +2426,7 @@ class AppConfig:
         metadata={
             "name": "logsObserverMaxSize",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2435,7 +2435,7 @@ class AppConfig:
         metadata={
             "name": "latencyMonitorDomain",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2444,7 +2444,7 @@ class AppConfig:
         metadata={
             "name": "dispatcherConfig",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2452,7 +2452,7 @@ class AppConfig:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2461,7 +2461,7 @@ class AppConfig:
         metadata={
             "name": "networkInterfaces",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2470,7 +2470,7 @@ class AppConfig:
         metadata={
             "name": "bmqconfConfig",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2478,7 +2478,7 @@ class AppConfig:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2487,7 +2487,7 @@ class AppConfig:
         metadata={
             "name": "messagePropertiesV2",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2496,7 +2496,7 @@ class AppConfig:
         metadata={
             "name": "configureStream",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2505,7 +2505,7 @@ class AppConfig:
         metadata={
             "name": "advertiseSubscriptions",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2514,7 +2514,7 @@ class AppConfig:
         metadata={
             "name": "routeCommandTimeoutMs",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2522,7 +2522,7 @@ class AppConfig:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2530,7 +2530,7 @@ class AppConfig:
         default=None,
         metadata={
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2539,7 +2539,7 @@ class AppConfig:
         metadata={
             "name": "tlsConfig",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
         },
     )
 
@@ -2562,7 +2562,7 @@ class ClustersDefinition:
         metadata={
             "name": "myClusters",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "min_occurs": 1,
         },
     )
@@ -2571,7 +2571,7 @@ class ClustersDefinition:
         metadata={
             "name": "myVirtualClusters",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "min_occurs": 1,
         },
     )
@@ -2580,7 +2580,7 @@ class ClustersDefinition:
         metadata={
             "name": "proxyClusters",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "min_occurs": 1,
         },
     )
@@ -2593,7 +2593,7 @@ class Configuration:
         metadata={
             "name": "taskConfig",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )
@@ -2602,7 +2602,7 @@ class Configuration:
         metadata={
             "name": "appConfig",
             "type": "Element",
-            "namespace": "http://bloomberg.com/schemas/mqbcfg",
+            "namespace": "http://bnpparibas.com/schemas/mqbcfg",
             "required": True,
         },
     )

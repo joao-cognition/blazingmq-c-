@@ -55,7 +55,7 @@
 #include <bsls_systemclocktype.h>
 #include <bsls_timeinterval.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbnet {
 
 namespace {

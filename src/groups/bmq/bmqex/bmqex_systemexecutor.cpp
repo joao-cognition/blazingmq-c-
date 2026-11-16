@@ -22,7 +22,7 @@
 #include <bslmt_lockguard.h>
 #include <bslmt_threadattributes.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqex {
 
 // ----------------------------

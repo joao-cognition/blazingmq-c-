@@ -16,7 +16,7 @@
 #include <mqbu_loadbalancer.h>
 
 #include <mqbscm_version.h>
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbu {
 
 // NOTHING

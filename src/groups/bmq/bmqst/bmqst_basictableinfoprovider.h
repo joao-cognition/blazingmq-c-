@@ -38,7 +38,7 @@
 #include <bslmf_nestedtraitdeclaration.h>
 #include <bslmf_nil.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 namespace bmqst {
 

@@ -45,7 +45,7 @@
 #include <bslmf_nestedtraitdeclaration.h>
 #include <bsls_types.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqst {
 
 // ===========
@@ -286,14 +286,14 @@ inline bool bmqst::operator!=(const bmqst::Value& lhs, const bmqst::Value& rhs)
 namespace bsl {
 
 template <>
-struct hash<BloombergLP::bmqst::Value> {
+struct hash<BNP_Paribas::bmqst::Value> {
     // ACCESSORS
-    size_t operator()(const BloombergLP::bmqst::Value& value) const;
+    size_t operator()(const BNP_Paribas::bmqst::Value& value) const;
 };
 
 // ACCESSORS
-inline size_t hash<BloombergLP::bmqst::Value>::operator()(
-    const BloombergLP::bmqst::Value& value) const
+inline size_t hash<BNP_Paribas::bmqst::Value>::operator()(
+    const BNP_Paribas::bmqst::Value& value) const
 {
     return value.hash();
 }

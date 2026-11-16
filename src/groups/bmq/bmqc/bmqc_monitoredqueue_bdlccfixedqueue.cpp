@@ -16,7 +16,7 @@
 #include <bmqc_monitoredqueue_bdlccfixedqueue.h>
 
 #include <bmqscm_version.h>
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqc {
 
 }  // close package namespace

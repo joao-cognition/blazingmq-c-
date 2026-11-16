@@ -43,7 +43,7 @@
 #include <bsl_limits.h>
 
 // CONVENIENCE
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 using namespace bsl;
 
 // ============================================================================
@@ -1269,7 +1269,7 @@ static void test8_calculateMd5Digest()
                                                             startPos,
                                                             data.size() + 1);
         }
-        catch (const BloombergLP::bsls::AssertTestException&) {
+        catch (const BNP_Paribas::bsls::AssertTestException&) {
             failed = true;
         }
         BMQTST_ASSERT_EQ(true, failed);

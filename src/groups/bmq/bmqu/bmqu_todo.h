@@ -72,7 +72,7 @@
 #include <bsl_format.h>
 #include <bsls_assert.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqu {
 
 class Todo {
@@ -115,6 +115,6 @@ inline Todo::operator T()
 }
 }
 
-#define BMQU_TODO(...) (BloombergLP::bmqu::Todo(__VA_ARGS__))
+#define BMQU_TODO(...) (BNP_Paribas::bmqu::Todo(__VA_ARGS__))
 
 #endif

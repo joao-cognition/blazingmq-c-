@@ -15,7 +15,7 @@
 # limitations under the License.
 
 # This script downloads, builds, and installs the required build dependencies of BMQ
-# from github.com/bloomberg. Software packages are installed to the /opt/bb prefix.
+# from github.com/bnpparibas. Software packages are installed to the /opt/bb prefix.
 #
 # Options:
 #   --only-download           Only download dependencies (skip build and install)
@@ -78,10 +78,10 @@ fetch_git() {
 }
 
 fetch_deps() {
-    fetch_git bloomberg ntf-core 2.6.13
+    fetch_git bnpparibas ntf-core 2.6.13
     fetch_git google googletest v1.8.x
     fetch_git bloomberg bde-tools 4.39.0.0
-    fetch_git bloomberg bde 4.39.0.0
+    fetch_git bnpparibas bde 4.39.0.0
 }
 
 configure() {

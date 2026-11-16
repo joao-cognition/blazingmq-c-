@@ -22,7 +22,7 @@
 #include <bsl_utility.h>
 #include <bsla_annotations.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqeval {
 
 // ----------------------

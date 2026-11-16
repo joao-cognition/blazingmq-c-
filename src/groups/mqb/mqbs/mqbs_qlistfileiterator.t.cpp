@@ -41,7 +41,7 @@
 #include <bsl_ostream.h>
 
 // CONVINIENCE
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 using namespace bsl;
 using namespace mqbs;
 

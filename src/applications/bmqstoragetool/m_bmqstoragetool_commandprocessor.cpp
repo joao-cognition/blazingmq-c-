@@ -16,7 +16,7 @@
 // bmqstoragetool
 #include <m_bmqstoragetool_commandprocessor.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace m_bmqstoragetool {
 
 // ----------------------

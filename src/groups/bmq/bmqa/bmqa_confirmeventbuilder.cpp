@@ -26,7 +26,7 @@
 #include <bsls_assert.h>
 #include <bsls_performancehint.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqa {
 
 // Compile-time assert to keep the hardcoded value of size of an object of type

@@ -31,7 +31,7 @@
 // TEST DRIVER
 #include <bmqtst_testhelper.h>
 
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 using namespace bsl;
 
 //=============================================================================

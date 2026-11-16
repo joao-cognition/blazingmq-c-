@@ -35,7 +35,7 @@
 #include <bslmf_nestedtraitdeclaration.h>
 #include <bsls_timeinterval.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 namespace bmqio {
 

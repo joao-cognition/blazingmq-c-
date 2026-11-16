@@ -108,7 +108,7 @@
 #include <bsl_memory.h>
 #include <bsls_alignedbuffer.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 // FORWARD DECLARATION
 namespace bmqp {

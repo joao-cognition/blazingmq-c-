@@ -48,7 +48,7 @@
 #include <ntsa_error.h>
 #include <ntsa_ipv4address.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbu {
 
 namespace {  // unnamed namespace

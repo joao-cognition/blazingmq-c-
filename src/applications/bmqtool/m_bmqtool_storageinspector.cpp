@@ -50,7 +50,7 @@
 #include <bslma_allocator.h>
 #include <bslma_managedptr.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace m_bmqtool {
 
 namespace {
@@ -1089,7 +1089,7 @@ StorageInspector::~StorageInspector()
 int StorageInspector::initialize()
 {
     // Print the welcome banner
-    BALL_LOG_INFO << "Welcome to the BlazingMQ tool storage inspector.\n"
+    BALL_LOG_INFO << "Welcome to the BNP Paribas BlazingMQ tool storage inspector.\n"
                   << "Type 'help' to see the list of commands supported by "
                   << "storage inspector. Ctrl-D to quit.";
     return 0;

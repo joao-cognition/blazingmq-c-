@@ -23,7 +23,7 @@
 #include <bsla_maybeunused.h>
 #include <bsls_performancehint.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqp {
 
 namespace {

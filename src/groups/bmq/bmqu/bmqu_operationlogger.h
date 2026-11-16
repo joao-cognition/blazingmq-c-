@@ -90,7 +90,7 @@
 #include <bmqu_printutil.h>
 #include <bmqu_time.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqu {
 
 // =====================

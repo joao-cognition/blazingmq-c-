@@ -19,7 +19,7 @@
 // BDE
 #include <bdlb_print.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbplug {
 
 // -----------------

@@ -19,7 +19,7 @@
 // BDE
 #include <bslmt_threadutil.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqu {
 
 // ---------------------

@@ -25,7 +25,7 @@
 #include <bsl_algorithm.h>
 #include <bsl_iostream.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbc {
 
 // ------------------------

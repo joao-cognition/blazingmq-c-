@@ -37,7 +37,7 @@
 #include <gtest/gtest.h>
 
 // CONVENIENCE
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 
 namespace {
 

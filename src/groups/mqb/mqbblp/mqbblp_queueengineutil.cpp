@@ -58,7 +58,7 @@
 #include <bsl_memory.h>
 #include <sys/stat.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbblp {
 namespace {
 
@@ -1533,4 +1533,4 @@ bool QueueEngineUtil_AppState::getOldestMessageIteratorFromList(
 }
 
 }  // close namespace mqbblp
-}  // close namespace BloombergLP
+}  // close namespace BNP_Paribas

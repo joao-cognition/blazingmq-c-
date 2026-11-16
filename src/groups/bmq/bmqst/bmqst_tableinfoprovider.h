@@ -41,7 +41,7 @@
 #include <bsl_ostream.h>
 #endif
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqst {
 
 // =======================

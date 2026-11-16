@@ -46,7 +46,7 @@
 #include <bslmf_nestedtraitdeclaration.h>
 #include <bsls_cpp11.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 namespace mqbplug {
 

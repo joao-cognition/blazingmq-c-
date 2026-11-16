@@ -16,7 +16,7 @@
 #include <bmqpi_dtcontext.h>
 
 #include <bmqscm_version.h>
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqpi {
 
 // ---------------

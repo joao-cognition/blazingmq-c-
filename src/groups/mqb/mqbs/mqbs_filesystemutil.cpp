@@ -180,7 +180,7 @@
 extern "C" int madvise(void*, size_t, int);
 #endif
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbs {
 
 namespace {

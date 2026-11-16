@@ -20,7 +20,7 @@
 #include <bslmt_threadutil.h>
 #include <bsls_types.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqu {
 
 namespace {

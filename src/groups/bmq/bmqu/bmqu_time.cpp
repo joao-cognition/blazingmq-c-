@@ -27,7 +27,7 @@
 #include <bsls_systemtime.h>
 #include <bsls_timeutil.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqu {
 
 namespace {

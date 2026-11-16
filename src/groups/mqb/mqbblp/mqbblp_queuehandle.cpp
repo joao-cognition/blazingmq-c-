@@ -59,7 +59,7 @@
 #include <bsls_assert.h>
 #include <bsls_types.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbblp {
 
 namespace {

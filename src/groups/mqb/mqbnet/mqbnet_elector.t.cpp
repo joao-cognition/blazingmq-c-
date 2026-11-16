@@ -32,9 +32,9 @@
 // TEST DRIVER
 #include <bmqtst_testhelper.h>
 
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 using namespace bsl;
-using namespace BloombergLP::mqbnet;
+using namespace BNP_Paribas::mqbnet;
 
 // IMPLEMENTATION NOTE
 // ===================

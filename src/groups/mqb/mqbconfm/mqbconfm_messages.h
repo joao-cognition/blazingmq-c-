@@ -51,7 +51,7 @@
 #include <bsl_ostream.h>
 #include <bsl_string.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 namespace bslma {
 class Allocator;
@@ -3169,7 +3169,7 @@ namespace mqbconfm {
 // ============
 
 class Domain {
-    // Configuration for a Domain using the custom Bloomberg Domain.
+    // Configuration for a Domain using the custom BNP Paribas Domain.
     // name................: name of this domain mode................: mode of
     // the queues in this domain storage.............: storage to use by queues
     // in this domain maxConsumers........: will reject if more than this

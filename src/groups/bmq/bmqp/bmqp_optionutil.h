@@ -35,7 +35,7 @@
 #include <bdlbb_blob.h>
 #include <bsls_assert.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqp {
 
 /// Utilities for builders and iterators that use options.

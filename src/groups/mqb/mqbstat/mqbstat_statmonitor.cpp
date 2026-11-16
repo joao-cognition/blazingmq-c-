@@ -37,7 +37,7 @@
 // SYS
 #include <sys/resource.h>  // for getrusage()
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbstat {
 
 namespace {

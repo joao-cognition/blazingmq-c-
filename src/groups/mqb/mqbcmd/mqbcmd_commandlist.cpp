@@ -23,7 +23,7 @@
 #include <bdlb_arrayutil.h>
 #include <bsl_vector.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbcmd {
 
 namespace {

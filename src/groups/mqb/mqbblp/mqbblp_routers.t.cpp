@@ -43,10 +43,10 @@
 #include <bsl_memory.h>
 
 // CONVENIENCE
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 using namespace bsl;
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 /// Mechanism to mock QueueHandle and StorageIterator for Router testing.
 struct TestStorage {

@@ -26,7 +26,7 @@
 #include <bsls_keyword.h>
 #include <bslstl_sharedptr.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqio {
 
 class ChannelFactoryPipeline : public bmqio::ChannelFactory {

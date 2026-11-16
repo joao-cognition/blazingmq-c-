@@ -45,7 +45,7 @@
 #endif
 #include <bsl_type_traits.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqex {
 
 #if defined(BSLS_COMPILERFEATURES_SUPPORT_DECLTYPE) &&                        \

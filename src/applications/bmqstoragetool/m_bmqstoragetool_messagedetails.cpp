@@ -26,7 +26,7 @@
 #include <bsl_algorithm.h>
 #include <bsl_vector.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace m_bmqstoragetool {
 
 namespace {
@@ -57,7 +57,7 @@ class AppKeyMatcher {
 
 bool findQueueAppIdByAppKey(
     bsl::string*                                             appId,
-    const bsl::vector<BloombergLP::bmqp_ctrlmsg::AppIdInfo>& appIds,
+    const bsl::vector<BNP_Paribas::bmqp_ctrlmsg::AppIdInfo>& appIds,
     const mqbu::StorageKey&                                  appKey)
 {
     // PRECONDITIONS
@@ -66,7 +66,7 @@ bool findQueueAppIdByAppKey(
     if (appKey.isNull())
         return false;  // RETURN
 
-    bsl::vector<BloombergLP::bmqp_ctrlmsg::AppIdInfo>::const_iterator it =
+    bsl::vector<BNP_Paribas::bmqp_ctrlmsg::AppIdInfo>::const_iterator it =
         bsl::find_if(appIds.cbegin(), appIds.cend(), AppKeyMatcher(appKey));
 
     if (it != appIds.end()) {

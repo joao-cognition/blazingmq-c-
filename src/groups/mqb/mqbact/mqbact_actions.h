@@ -40,7 +40,7 @@
 #include <bsl_limits.h>
 #include <bsl_type_traits.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 namespace bslma {
 class Allocator;

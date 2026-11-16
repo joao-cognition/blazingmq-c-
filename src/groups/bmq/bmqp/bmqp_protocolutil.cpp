@@ -35,7 +35,7 @@
 #include <bslmt_once.h>
 #include <bsls_objectbuffer.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqp {
 
 namespace {

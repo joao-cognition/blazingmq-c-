@@ -26,7 +26,7 @@
 #include <bslma_default.h>
 #include <bslma_managedptr.h>
 
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 
 extern "C" {
 void instantiatePluginLibrary(

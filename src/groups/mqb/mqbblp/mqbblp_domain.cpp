@@ -52,7 +52,7 @@
 #include <bslmt_lockguard.h>
 #include <bslmt_semaphore.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbblp {
 
 namespace {

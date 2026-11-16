@@ -20,7 +20,7 @@
 ///
 /// @brief Provide a protocol for an authorizer.
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 // FORWARD DECLARATION
 

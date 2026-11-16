@@ -49,7 +49,7 @@
 #include <bslmt_lockguard.h>
 #include <bslmt_mutex.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqio {
 
 // =======================

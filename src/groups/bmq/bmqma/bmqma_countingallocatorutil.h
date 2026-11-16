@@ -36,7 +36,7 @@
 #include <bsl_iosfwd.h>
 #include <bsl_string_view.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 // FORWARD DECLARE
 namespace bmqst {

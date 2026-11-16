@@ -22,7 +22,7 @@
 #include <bslmt_once.h>
 #include <bsls_atomic.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqt {
 
 // -------------------

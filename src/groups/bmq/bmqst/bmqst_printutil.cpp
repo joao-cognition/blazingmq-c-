@@ -29,7 +29,7 @@
 #include <bsl_iomanip.h>
 #include <bsl_ios.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace bmqst {
 
 namespace {

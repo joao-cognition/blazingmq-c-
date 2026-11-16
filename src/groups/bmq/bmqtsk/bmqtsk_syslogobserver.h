@@ -88,7 +88,7 @@
 #include <bslmt_mutex.h>
 #include <bsls_cpp11.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 
 namespace bmqtsk {
 

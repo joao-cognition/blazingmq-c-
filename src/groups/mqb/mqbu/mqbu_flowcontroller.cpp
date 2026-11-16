@@ -15,7 +15,7 @@
 
 #include <mqbu_flowcontroller.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbu {
 
 // --------------------

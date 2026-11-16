@@ -34,7 +34,7 @@
 #include <bslma_testallocator.h>
 #include <bslma_testallocatormonitor.h>
 
-using namespace BloombergLP;
+using namespace BNP_Paribas;
 using namespace bsl;
 using namespace bmqst;
 

@@ -74,7 +74,7 @@
 // MQB
 #include <mqbevt_callbackevent.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqba {
 
 namespace {

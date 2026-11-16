@@ -44,7 +44,7 @@
 #include <bsls_performancehint.h>
 #include <bslstl_stringref.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbblp {
 
 namespace {

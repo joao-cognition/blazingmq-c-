@@ -29,7 +29,7 @@
 #include <bslim_printer.h>
 #include <bslmt_lockguard.h>
 
-namespace BloombergLP {
+namespace BNP_Paribas {
 namespace mqbmock {
 
 // ----------------
