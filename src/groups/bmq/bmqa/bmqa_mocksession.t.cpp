@@ -118,23 +118,18 @@ struct EventHandler : public bmqa::SessionEventHandler {
     {
         bmqa::MockSession& mockSession = *mockSession_p;
 
-        mockSession.enqueueEvent(
-            bmqa::MockSessionUtil::createQueueSessionEvent(
-                bmqt::SessionEventType::e_QUEUE_OPEN_RESULT,
-                queueId,
-                queueId->correlationId(),
-                0,
-                bmqt::GenericResult::e_SUCCESS,
+        BMQA_EXPECT_CALL(mockSession,
+                         openQueueSync(0,  // Dont care about queueId
+                                       uri,
+                                       bmqt::QueueFlags::e_WRITE))
+            .returning(bmqa::MockSessionUtil::createOpenQueueStatus(
+                *queueId,
+                bmqt::OpenQueueResult::e_SUCCESS,
                 "",
                 bmqtst::TestHelperUtil::allocator()));
-
-        BMQA_EXPECT_CALL(mockSession,
-                         openQueueAsync(0,  // Dont care about queueId
-                                        uri,
-                                        bmqt::QueueFlags::e_WRITE))
-            .returning(0);
-        mockSession.openQueueAsync(queueId, uri, bmqt::QueueFlags::e_WRITE);
-        mockSession.emitEvent();
+        const bmqa::OpenQueueStatus status =
+            mockSession.openQueueSync(queueId, uri, bmqt::QueueFlags::e_WRITE);
+        BMQTST_ASSERT_EQ(status.result(), bmqt::OpenQueueResult::e_SUCCESS);
     }
 
     /// Compare if the specified `lhs` event is equal to the specified `rhs`
@@ -783,69 +778,49 @@ static void test4_queueManagementSync()
     PVV("Verify state changes");
 
     {
-        PVVV("Unsuccessful openQueue response");
-        BMQA_EXPECT_CALL(mockSession, openQueueAsync(&queueId1, uri1, 10))
-            .returning(0);
-        BMQA_EXPECT_CALL(mockSession, nextEvent())
-            .returning(bmqa::MockSessionUtil::createQueueSessionEvent(
-                bmqt::SessionEventType::e_QUEUE_OPEN_RESULT,
-                &queueId1,
-                queueId1.correlationId(),
-                1,
-                bmqt::GenericResult::e_UNKNOWN,
+        PVVV("Unsuccessful openQueueSync response");
+        BMQA_EXPECT_CALL(mockSession, openQueueSync(&queueId1, uri1, 10))
+            .returning(bmqa::MockSessionUtil::createOpenQueueStatus(
+                queueId1,
+                bmqt::OpenQueueResult::e_UNKNOWN,
                 "",
                 bmqtst::TestHelperUtil::allocator()));
 
-        BMQTST_ASSERT_EQ(mockSession.openQueueAsync(&queueId1, uri1, 10), 0);
+        bmqa::OpenQueueStatus result = mockSession.openQueueSync(&queueId1,
+                                                                 uri1,
+                                                                 10);
+        BMQTST_ASSERT_EQ(result.result(), bmqt::OpenQueueResult::e_UNKNOWN);
+        BMQTST_ASSERT_EQ(result.errorDescription(), "");
+        BMQTST_ASSERT_EQ(result.queueId().correlationId(), corrId1);
+
         typedef bsl::shared_ptr<bmqimp::Queue>& QueueImplPtr;
         QueueImplPtr implPtr = reinterpret_cast<QueueImplPtr>(queueId1);
 
-        BMQTST_ASSERT_EQ(implPtr->uri(), uri1);
         BMQTST_ASSERT_EQ(implPtr->correlationId(), corrId1);
-        BMQTST_ASSERT_EQ(implPtr->state(), bmqimp::QueueState::e_OPENING_OPN);
-
-        bmqa::SessionEvent openQueueEvent =
-            mockSession.nextEvent().sessionEvent();
-
-        BMQTST_ASSERT_EQ(openQueueEvent.type(),
-                         bmqt::SessionEventType::e_QUEUE_OPEN_RESULT);
-        BMQTST_ASSERT_EQ(openQueueEvent.statusCode(), 1);
-        BMQTST_ASSERT_EQ(openQueueEvent.errorDescription(), "");
-        BMQTST_ASSERT_EQ(openQueueEvent.correlationId(), corrId1);
-
         BMQTST_ASSERT_EQ(implPtr->state(), bmqimp::QueueState::e_CLOSED);
     }
 
     {
-        PVVV("Successful openQueue response");
-        BMQA_EXPECT_CALL(mockSession, openQueueAsync(&queueId1, uri1, 10))
-            .returning(0);
-        BMQA_EXPECT_CALL(mockSession, nextEvent())
-            .returning(bmqa::MockSessionUtil::createQueueSessionEvent(
-                bmqt::SessionEventType::e_QUEUE_OPEN_RESULT,
-                &queueId1,
-                queueId1.correlationId(),
-                0,
-                bmqt::GenericResult::e_SUCCESS,
+        PVVV("Successful openQueueSync response");
+        BMQA_EXPECT_CALL(mockSession, openQueueSync(&queueId1, uri1, 10))
+            .returning(bmqa::MockSessionUtil::createOpenQueueStatus(
+                queueId1,
+                bmqt::OpenQueueResult::e_SUCCESS,
                 "",
                 bmqtst::TestHelperUtil::allocator()));
 
-        BMQTST_ASSERT_EQ(mockSession.openQueueAsync(&queueId1, uri1, 10), 0);
+        bmqa::OpenQueueStatus result = mockSession.openQueueSync(&queueId1,
+                                                                 uri1,
+                                                                 10);
+        BMQTST_ASSERT_EQ(result.result(), bmqt::OpenQueueResult::e_SUCCESS);
+        BMQTST_ASSERT_EQ(result.errorDescription(), "");
+        BMQTST_ASSERT_EQ(result.queueId().correlationId(), corrId1);
+
         typedef bsl::shared_ptr<bmqimp::Queue>& QueueImplPtr;
         QueueImplPtr implPtr = reinterpret_cast<QueueImplPtr>(queueId1);
 
         BMQTST_ASSERT_EQ(implPtr->uri(), uri1);
         BMQTST_ASSERT_EQ(implPtr->correlationId(), corrId1);
-        BMQTST_ASSERT_EQ(implPtr->state(), bmqimp::QueueState::e_OPENING_OPN);
-
-        bmqa::SessionEvent openQueueEvent =
-            mockSession.nextEvent().sessionEvent();
-        BMQTST_ASSERT_EQ(openQueueEvent.type(),
-                         bmqt::SessionEventType::e_QUEUE_OPEN_RESULT);
-        BMQTST_ASSERT_EQ(openQueueEvent.statusCode(), 0);
-        BMQTST_ASSERT_EQ(openQueueEvent.errorDescription(), "");
-        BMQTST_ASSERT_EQ(openQueueEvent.correlationId(), corrId1);
-
         BMQTST_ASSERT_EQ(implPtr->state(), bmqimp::QueueState::e_OPENED);
     }
 }
@@ -1121,32 +1096,20 @@ static void test6_runThrough()
         mockSession.finalizeStop();
         BMQTST_ASSERT_EQ(mockSession.emitEvent(), true);
 
-        BMQA_EXPECT_CALL(mockSession, openQueue(&queueId, uri, 0))
-            .returning(0)
+        BMQA_EXPECT_CALL(mockSession, openQueueSync(&queueId, uri, 0))
+            .returning(testOpenQueueResult)
             .emitting(testEvent);
-        rc = mockSession.openQueue(&queueId, uri, 0);
-        BMQTST_ASSERT_EQ(rc, 0);
+        const bmqa::OpenQueueStatus openStatus =
+            mockSession.openQueueSync(&queueId, uri, 0);
+        BMQTST_ASSERT_EQ(openStatus.result(), testOpenQueueResult.result());
         BMQTST_ASSERT_EQ(mockSession.emitEvent(), true);
 
-        BMQA_EXPECT_CALL(mockSession, closeQueue(&queueId))
-            .returning(0)
+        BMQA_EXPECT_CALL(mockSession, closeQueueSync(&queueId))
+            .returning(testCloseQueueResult)
             .emitting(testEvent);
-        rc = mockSession.closeQueue(&queueId);
-        BMQTST_ASSERT_EQ(rc, 0);
-        BMQTST_ASSERT_EQ(mockSession.emitEvent(), true);
-
-        BMQA_EXPECT_CALL(mockSession, openQueueAsync(&queueId, uri, 0))
-            .returning(0)
-            .emitting(testEvent);
-        rc = mockSession.openQueueAsync(&queueId, uri, 0);
-        BMQTST_ASSERT_EQ(rc, 0);
-        BMQTST_ASSERT_EQ(mockSession.emitEvent(), true);
-
-        BMQA_EXPECT_CALL(mockSession, closeQueueAsync(&queueId))
-            .returning(0)
-            .emitting(testEvent);
-        rc = mockSession.closeQueueAsync(&queueId);
-        BMQTST_ASSERT_EQ(rc, 0);
+        const bmqa::CloseQueueStatus closeStatus = mockSession.closeQueueSync(
+            &queueId);
+        BMQTST_ASSERT_EQ(closeStatus.result(), testCloseQueueResult.result());
         BMQTST_ASSERT_EQ(mockSession.emitEvent(), true);
 
         BMQA_EXPECT_CALL(mockSession,
@@ -1161,13 +1124,6 @@ static void test6_runThrough()
         mockSession.openQueueAsync(&queueId, uri, 0, openQueueCallback);
         BMQTST_ASSERT_EQ(mockSession.emitEvent(), true);
 
-        BMQA_EXPECT_CALL(mockSession, configureQueue(&queueId))
-            .returning(0)
-            .emitting(testEvent);
-        rc = mockSession.configureQueue(&queueId);
-        BMQTST_ASSERT_EQ(rc, 0);
-        BMQTST_ASSERT_EQ(mockSession.emitEvent(), true);
-
         BMQA_EXPECT_CALL(mockSession,
                          configureQueueSync(&queueId,
                                             bmqt::QueueOptions(),
@@ -1178,13 +1134,6 @@ static void test6_runThrough()
                                                         bmqt::QueueOptions(),
                                                         bsls::TimeInterval()),
                          testConfigureQueueResult);
-        BMQTST_ASSERT_EQ(mockSession.emitEvent(), true);
-
-        BMQA_EXPECT_CALL(mockSession, configureQueueAsync(&queueId))
-            .returning(0)
-            .emitting(testEvent);
-        rc = mockSession.configureQueueAsync(&queueId);
-        BMQTST_ASSERT_EQ(rc, 0);
         BMQTST_ASSERT_EQ(mockSession.emitEvent(), true);
 
         BMQA_EXPECT_CALL(mockSession,

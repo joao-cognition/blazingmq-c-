@@ -573,6 +573,7 @@
 #include <bsl_unordered_map.h>
 #include <bsl_unordered_set.h>
 #include <bsl_vector.h>
+#include <bsla_deprecated.h>
 #include <bslma_allocator.h>
 #include <bslma_managedptr.h>
 #include <bslma_usesbslmaallocator.h>
@@ -1371,8 +1372,7 @@ class MockSession : public AbstractSession {
         BSLS_KEYWORD_OVERRIDE;
 
     /// DEPRECATED: Use the `openQueueSync(QueueId *queueId...)` instead.
-    ///             This method will be marked as `BSLA_DEPRECATED` in future
-    ///             release of libbmq.
+    BSLA_DEPRECATED
     int openQueue(QueueId*                  queueId,
                   const bmqt::Uri&          uri,
                   bsls::Types::Uint64       flags,
@@ -1397,8 +1397,8 @@ class MockSession : public AbstractSession {
         BSLS_KEYWORD_OVERRIDE;
 
     /// DEPRECATED: Use the `openQueueAsync(...)` with callback flavor
-    ///             instead.  This method will be marked as `BSLA_DEPRECATED`
-    ///             in future release of libbmq.
+    ///             instead.
+    BSLA_DEPRECATED
     int
     openQueueAsync(QueueId*                  queueId,
                    const bmqt::Uri&          uri,
@@ -1433,8 +1433,7 @@ class MockSession : public AbstractSession {
         BSLS_KEYWORD_OVERRIDE;
 
     /// DEPRECATED: Use the `configureQueueSync(QueueId *queueId...)` instead.
-    ///             This method will be marked as `BSLA_DEPRECATED` in future
-    ///             release of libbmq.
+    BSLA_DEPRECATED
     int
     configureQueue(QueueId*                  queueId,
                    const bmqt::QueueOptions& options = bmqt::QueueOptions(),
@@ -1451,8 +1450,8 @@ class MockSession : public AbstractSession {
         BSLS_KEYWORD_OVERRIDE;
 
     /// DEPRECATED: Use the `configureQueueAsync(...)` with callback flavor
-    ///             instead.  This method will be marked as `BSLA_DEPRECATED`
-    ///             in future release of libbmq.
+    ///             instead.
+    BSLA_DEPRECATED
     int configureQueueAsync(
         QueueId*                  queueId,
         const bmqt::QueueOptions& options = bmqt::QueueOptions(),
@@ -1474,8 +1473,7 @@ class MockSession : public AbstractSession {
                                  bsls::TimeInterval()) BSLS_KEYWORD_OVERRIDE;
 
     /// DEPRECATED: Use the `closeQueueSync(QueueId *queueId...)` instead.
-    ///             This method will be marked as `BSLA_DEPRECATED` in future
-    ///             release of libbmq.
+    BSLA_DEPRECATED
     int closeQueue(QueueId*                  queueId,
                    const bsls::TimeInterval& timeout = bsls::TimeInterval())
         BSLS_KEYWORD_OVERRIDE;
@@ -1491,8 +1489,8 @@ class MockSession : public AbstractSession {
         BSLS_KEYWORD_OVERRIDE;
 
     /// DEPRECATED: Use the `closeQueueAsync(...)` with callback flavor
-    ///             instead.  This method will be marked as `BSLA_DEPRECATED`
-    ///             in future release of libbmq.
+    ///             instead.
+    BSLA_DEPRECATED
     int closeQueueAsync(QueueId*                  queueId,
                         const bsls::TimeInterval& timeout =
                             bsls::TimeInterval()) BSLS_KEYWORD_OVERRIDE;

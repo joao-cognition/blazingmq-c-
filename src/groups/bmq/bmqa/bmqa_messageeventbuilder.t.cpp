@@ -83,13 +83,17 @@ static void test2_testMessageEventSizeCount()
 
     {
         // Open queue
-        BMQA_EXPECT_CALL(session,
-                         openQueue(&queueId, uri, bmqt::QueueFlags::e_WRITE))
-            .returning(0);
-        const int rc = session.openQueue(&queueId,
-                                         uri,
-                                         bmqt::QueueFlags::e_WRITE);
-        BMQTST_ASSERT_EQ(rc, 0);
+        BMQA_EXPECT_CALL(
+            session,
+            openQueueSync(&queueId, uri, bmqt::QueueFlags::e_WRITE))
+            .returning(bmqa::MockSessionUtil::createOpenQueueStatus(
+                queueId,
+                bmqt::OpenQueueResult::e_SUCCESS,
+                "",
+                bmqtst::TestHelperUtil::allocator()));
+        const bmqa::OpenQueueStatus status =
+            session.openQueueSync(&queueId, uri, bmqt::QueueFlags::e_WRITE);
+        BMQTST_ASSERT_EQ(status.result(), bmqt::OpenQueueResult::e_SUCCESS);
     }
 
     // Stage 2: populate MessageEventBuilder
