@@ -289,14 +289,17 @@ struct SessionUtil {
 
     // Queue operations preparation
     // ----------------------------
-    // The `prepare*Queue` functions are the single entry point shared by
-    // every flavor (deprecated sync, `*Sync`, int-returning `*Async` and
-    // callback `*Async`) of the corresponding `Session` queue operation: they
-    // validate the parameters (logging the error description on failure) and
-    // load into the specified `effectiveTimeout` the specified `timeout`, or
-    // the default from `SessionOptions` if `timeout` is unset.  Only the
-    // final dispatch to `bmqimp::BrokerSession` differs between flavors.
+    // Shared by every flavor (deprecated sync, `*Sync`, int-returning
+    // `*Async` and callback `*Async`) of the corresponding `Session` queue
+    // operation; only the final dispatch to `bmqimp::BrokerSession` differs.
 
+    /// Validate the specified `queueId`, `uri`, `flags`, `options` and
+    /// `timeout` for an open queue operation on the specified `sessionImpl`.
+    /// On success, load into the specified `effectiveTimeout` the `timeout`,
+    /// or the `openQueueTimeout` from `SessionOptions` if `timeout` is unset,
+    /// and return `e_SUCCESS`.  Otherwise, log and load into the specified
+    /// `errorDescription` the reason of the failure, leave
+    /// `effectiveTimeout` unchanged and return the validation error.
     static bmqt::OpenQueueResult::Enum
     prepareOpenQueue(bmqu::MemOutStream*       errorDescription,
                      bsls::TimeInterval*       effectiveTimeout,
@@ -307,6 +310,13 @@ struct SessionUtil {
                      const bmqt::QueueOptions& options,
                      const bsls::TimeInterval& timeout);
 
+    /// Validate the specified `queueId`, `options` and `timeout` for a
+    /// configure queue operation on the specified `sessionImpl`.  On success,
+    /// load into the specified `effectiveTimeout` the `timeout`, or the
+    /// `configureQueueTimeout` from `SessionOptions` if `timeout` is unset,
+    /// and return `e_SUCCESS`.  Otherwise, log and load into the specified
+    /// `errorDescription` the reason of the failure, leave
+    /// `effectiveTimeout` unchanged and return the validation error.
     static bmqt::ConfigureQueueResult::Enum
     prepareConfigureQueue(bmqu::MemOutStream*       errorDescription,
                           bsls::TimeInterval*       effectiveTimeout,
@@ -315,6 +325,13 @@ struct SessionUtil {
                           const bmqt::QueueOptions& options,
                           const bsls::TimeInterval& timeout);
 
+    /// Validate the specified `queueId` and `timeout` for a close queue
+    /// operation on the specified `sessionImpl`.  On success, load into the
+    /// specified `effectiveTimeout` the `timeout`, or the
+    /// `closeQueueTimeout` from `SessionOptions` if `timeout` is unset, and
+    /// return `e_SUCCESS`.  Otherwise, log and load into the specified
+    /// `errorDescription` the reason of the failure, leave
+    /// `effectiveTimeout` unchanged and return the validation error.
     static bmqt::CloseQueueResult::Enum
     prepareCloseQueue(bmqu::MemOutStream*       errorDescription,
                       bsls::TimeInterval*       effectiveTimeout,
