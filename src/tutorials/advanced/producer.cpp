@@ -783,8 +783,9 @@ static void produce(bmqa::Session* session, QueueManager* queueManager)
         k_QUEUE_URL,
         bmqt::QueueFlags::e_WRITE | bmqt::QueueFlags::e_ACK);
 
-    // Note that 'openQueue()' takes 2 more optional parameters - queue options
-    // and timeout.  See 'openQueue()' documentation for more details.
+    // Note that 'openQueueSync()' takes 2 more optional parameters - queue
+    // options and timeout.  See 'openQueueSync()' documentation for more
+    // details.
 
     if (!openStatus) {
         BALL_LOG_ERROR << "Failed to open queue: '" << k_QUEUE_URL

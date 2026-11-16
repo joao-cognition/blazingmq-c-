@@ -251,6 +251,10 @@ struct AbstractSessionDummyImp : bsls::ProtocolTestImp<bmqa::AbstractSession> {
 //                                    TESTS
 // ----------------------------------------------------------------------------
 
+// `test1` and `test2` intentionally exercise the deprecated queue
+// management overloads of `bmqa::AbstractSession`.
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 static void test1_breathingTest()
 // ------------------------------------------------------------------------
 // PROTOCOL TEST:
@@ -606,6 +610,7 @@ static void test2_instanceInvariants()
     BMQTST_ASSERT_OPT_PASS(testObj.configureMessageDumping(""));
     BMQTST_ASSERT_EQ(testObj.configureMessageDumping(""), -1497);
 }
+#pragma GCC diagnostic pop
 
 // ============================================================================
 //                                 MAIN PROGRAM

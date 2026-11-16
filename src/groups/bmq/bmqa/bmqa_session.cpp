@@ -286,6 +286,41 @@ struct SessionUtil {
                                        const QueueId*      queueId,
                                        const SessionImpl*  sessionImpl,
                                        const bsls::TimeInterval& timeout);
+
+    // Queue operations preparation
+    // ----------------------------
+    // The `prepare*Queue` functions are the single entry point shared by
+    // every flavor (deprecated sync, `*Sync`, int-returning `*Async` and
+    // callback `*Async`) of the corresponding `Session` queue operation: they
+    // validate the parameters (logging the error description on failure) and
+    // load into the specified `effectiveTimeout` the specified `timeout`, or
+    // the default from `SessionOptions` if `timeout` is unset.  Only the
+    // final dispatch to `bmqimp::BrokerSession` differs between flavors.
+
+    static bmqt::OpenQueueResult::Enum
+    prepareOpenQueue(bmqu::MemOutStream*       errorDescription,
+                     bsls::TimeInterval*       effectiveTimeout,
+                     QueueId*                  queueId,
+                     SessionImpl*              sessionImpl,
+                     const bmqt::Uri&          uri,
+                     bsls::Types::Uint64       flags,
+                     const bmqt::QueueOptions& options,
+                     const bsls::TimeInterval& timeout);
+
+    static bmqt::ConfigureQueueResult::Enum
+    prepareConfigureQueue(bmqu::MemOutStream*       errorDescription,
+                          bsls::TimeInterval*       effectiveTimeout,
+                          const QueueId*            queueId,
+                          const SessionImpl*        sessionImpl,
+                          const bmqt::QueueOptions& options,
+                          const bsls::TimeInterval& timeout);
+
+    static bmqt::CloseQueueResult::Enum
+    prepareCloseQueue(bmqu::MemOutStream*       errorDescription,
+                      bsls::TimeInterval*       effectiveTimeout,
+                      const QueueId*            queueId,
+                      const SessionImpl*        sessionImpl,
+                      const bsls::TimeInterval& timeout);
 };
 
 // -----------
@@ -705,6 +740,92 @@ bmqt::CloseQueueResult::Enum SessionUtil::validateAndSetCloseQueueParameters(
     return bmqt::CloseQueueResult::e_SUCCESS;
 }
 
+bmqt::OpenQueueResult::Enum
+SessionUtil::prepareOpenQueue(bmqu::MemOutStream*       errorDescription,
+                              bsls::TimeInterval*       effectiveTimeout,
+                              QueueId*                  queueId,
+                              SessionImpl*              sessionImpl,
+                              const bmqt::Uri&          uri,
+                              bsls::Types::Uint64       flags,
+                              const bmqt::QueueOptions& options,
+                              const bsls::TimeInterval& timeout)
+{
+    bmqt::OpenQueueResult::Enum rc = validateAndSetOpenQueueParameters(
+        errorDescription,
+        queueId,
+        sessionImpl,
+        uri,
+        flags,
+        options,
+        timeout);
+    if (rc != bmqt::OpenQueueResult::e_SUCCESS) {
+        BALL_LOG_ERROR << errorDescription->str();
+        return rc;  // RETURN
+    }
+
+    *effectiveTimeout = timeout;
+    if (*effectiveTimeout == bsls::TimeInterval()) {
+        *effectiveTimeout =
+            sessionImpl->d_application_mp->sessionOptions().openQueueTimeout();
+    }
+
+    return rc;
+}
+
+bmqt::ConfigureQueueResult::Enum
+SessionUtil::prepareConfigureQueue(bmqu::MemOutStream*       errorDescription,
+                                   bsls::TimeInterval*       effectiveTimeout,
+                                   const QueueId*            queueId,
+                                   const SessionImpl*        sessionImpl,
+                                   const bmqt::QueueOptions& options,
+                                   const bsls::TimeInterval& timeout)
+{
+    bmqt::ConfigureQueueResult::Enum rc =
+        validateAndSetConfigureQueueParameters(errorDescription,
+                                               queueId,
+                                               sessionImpl,
+                                               options,
+                                               timeout);
+    if (rc != bmqt::ConfigureQueueResult::e_SUCCESS) {
+        BALL_LOG_ERROR << errorDescription->str();
+        return rc;  // RETURN
+    }
+
+    *effectiveTimeout = timeout;
+    if (*effectiveTimeout == bsls::TimeInterval()) {
+        *effectiveTimeout = sessionImpl->d_application_mp->sessionOptions()
+                                .configureQueueTimeout();
+    }
+
+    return rc;
+}
+
+bmqt::CloseQueueResult::Enum
+SessionUtil::prepareCloseQueue(bmqu::MemOutStream*       errorDescription,
+                               bsls::TimeInterval*       effectiveTimeout,
+                               const QueueId*            queueId,
+                               const SessionImpl*        sessionImpl,
+                               const bsls::TimeInterval& timeout)
+{
+    bmqt::CloseQueueResult::Enum rc = validateAndSetCloseQueueParameters(
+        errorDescription,
+        queueId,
+        sessionImpl,
+        timeout);
+    if (rc != bmqt::CloseQueueResult::e_SUCCESS) {
+        BALL_LOG_ERROR << errorDescription->str();
+        return rc;  // RETURN
+    }
+
+    *effectiveTimeout = timeout;
+    if (*effectiveTimeout == bsls::TimeInterval()) {
+        *effectiveTimeout = sessionImpl->d_application_mp->sessionOptions()
+                                .closeQueueTimeout();
+    }
+
+    return rc;
+}
+
 class MessageEventCreator {
     bmqp::BlobPoolUtil::BlobSpPool* d_blobSpPool_p;
     bmqimp::BrokerSession*          d_brokerSession_p;
@@ -994,26 +1115,21 @@ int Session::openQueue(QueueId*                  queueId,
                        const bmqt::QueueOptions& options,
                        const bsls::TimeInterval& timeout)
 {
-    // Validate parameters
+    // Validate parameters and resolve the effective timeout
     bmqu::MemOutStream          error;
-    bmqt::OpenQueueResult::Enum validationRc =
-        SessionUtil::validateAndSetOpenQueueParameters(&error,
-                                                       queueId,
-                                                       &d_impl,
-                                                       uri,
-                                                       flags,
-                                                       options,
-                                                       timeout);
+    bsls::TimeInterval          time;
+    bmqt::OpenQueueResult::Enum validationRc = SessionUtil::prepareOpenQueue(
+        &error,
+        &time,
+        queueId,
+        &d_impl,
+        uri,
+        flags,
+        options,
+        timeout);
     if (validationRc != bmqt::OpenQueueResult::e_SUCCESS) {
         // Validation failed - abort operation and return error code
-        BALL_LOG_ERROR << error.str();
         return static_cast<int>(validationRc);  // RETURN
-    }
-
-    // Use default timeout (from SessionOptions) if none was provided
-    bsls::TimeInterval time = timeout;
-    if (time == bsls::TimeInterval()) {
-        time = d_impl.d_application_mp->sessionOptions().openQueueTimeout();
     }
 
     // Convert to bmqimp::Queue and forward the openQueue to impl
@@ -1035,27 +1151,22 @@ OpenQueueStatus Session::openQueueSync(QueueId*                  queueId,
                                        const bmqt::QueueOptions& options,
                                        const bsls::TimeInterval& timeout)
 {
-    // Validate parameters
+    // Validate parameters and resolve the effective timeout
     bmqu::MemOutStream          error;
-    bmqt::OpenQueueResult::Enum validationRc =
-        SessionUtil::validateAndSetOpenQueueParameters(&error,
-                                                       queueId,
-                                                       &d_impl,
-                                                       uri,
-                                                       flags,
-                                                       options,
-                                                       timeout);
+    bsls::TimeInterval          time;
+    bmqt::OpenQueueResult::Enum validationRc = SessionUtil::prepareOpenQueue(
+        &error,
+        &time,
+        queueId,
+        &d_impl,
+        uri,
+        flags,
+        options,
+        timeout);
     if (validationRc != bmqt::OpenQueueResult::e_SUCCESS) {
         // Validation failed - abort operation and return error code
-        BALL_LOG_ERROR << error.str();
         return OpenQueueStatus(*queueId, validationRc,
                                error.str());  // RETURN
-    }
-
-    // Use default timeout (from SessionOptions) if none was provided
-    bsls::TimeInterval time = timeout;
-    if (time == bsls::TimeInterval()) {
-        time = d_impl.d_application_mp->sessionOptions().openQueueTimeout();
     }
 
     // Convert to 'bmqimp::Queue' and forward the openQueue to impl (the result
@@ -1080,6 +1191,10 @@ OpenQueueStatus Session::openQueueSync(QueueId*                  queueId,
     return status;
 }
 
+// The deprecated `const QueueId&` overload forwards to its (equally
+// deprecated) `QueueId*` counterpart to preserve behavior.
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 int Session::openQueue(const QueueId&            queueId,
                        const bmqt::Uri&          uri,
                        bsls::Types::Uint64       flags,
@@ -1089,6 +1204,7 @@ int Session::openQueue(const QueueId&            queueId,
     QueueId* queue = const_cast<QueueId*>(&queueId);
     return openQueue(queue, uri, flags, options, timeout);
 }
+#pragma GCC diagnostic pop
 
 int Session::openQueueAsync(QueueId*                  queueId,
                             const bmqt::Uri&          uri,
@@ -1096,26 +1212,21 @@ int Session::openQueueAsync(QueueId*                  queueId,
                             const bmqt::QueueOptions& options,
                             const bsls::TimeInterval& timeout)
 {
-    // Validate parameters
+    // Validate parameters and resolve the effective timeout
     bmqu::MemOutStream          error;
-    bmqt::OpenQueueResult::Enum validationRc =
-        SessionUtil::validateAndSetOpenQueueParameters(&error,
-                                                       queueId,
-                                                       &d_impl,
-                                                       uri,
-                                                       flags,
-                                                       options,
-                                                       timeout);
+    bsls::TimeInterval          time;
+    bmqt::OpenQueueResult::Enum validationRc = SessionUtil::prepareOpenQueue(
+        &error,
+        &time,
+        queueId,
+        &d_impl,
+        uri,
+        flags,
+        options,
+        timeout);
     if (validationRc != bmqt::OpenQueueResult::e_SUCCESS) {
         // Validation failed - abort operation and return error code
-        BALL_LOG_ERROR << error.str();
         return static_cast<int>(validationRc);  // RETURN
-    }
-
-    // Use default timeout (from SessionOptions) if none was provided
-    bsls::TimeInterval time = timeout;
-    if (time == bsls::TimeInterval()) {
-        time = d_impl.d_application_mp->sessionOptions().openQueueTimeout();
     }
 
     // Convert to bmqimp::Queue and forward the openQueue to impl
@@ -1151,19 +1262,20 @@ void Session::openQueueAsync(bmqa::QueueId*            queueId,
                              bdlf::PlaceHolders::_1,  // eventImpl
                              callback);
 
-    // Validate parameters
+    // Validate parameters and resolve the effective timeout
     bmqu::MemOutStream          error;
-    bmqt::OpenQueueResult::Enum validationRc =
-        SessionUtil::validateAndSetOpenQueueParameters(&error,
-                                                       queueId,
-                                                       &d_impl,
-                                                       uri,
-                                                       flags,
-                                                       options,
-                                                       timeout);
+    bsls::TimeInterval          time;
+    bmqt::OpenQueueResult::Enum validationRc = SessionUtil::prepareOpenQueue(
+        &error,
+        &time,
+        queueId,
+        &d_impl,
+        uri,
+        flags,
+        options,
+        timeout);
     if (validationRc != bmqt::OpenQueueResult::e_SUCCESS) {
         // Validation failed - enqueue callback invocation with error result
-        BALL_LOG_ERROR << error.str();
         int rc = static_cast<int>(validationRc);
         d_impl.d_application_mp->brokerSession().enqueueSessionEvent(
             bmqt::SessionEventType::e_QUEUE_OPEN_RESULT,
@@ -1174,12 +1286,6 @@ void Session::openQueueAsync(bmqa::QueueId*            queueId,
             queue,
             eventCallback);
         return;  // RETURN
-    }
-
-    // Use default timeout (from SessionOptions) if none was provided
-    bsls::TimeInterval time = timeout;
-    if (time == bsls::TimeInterval()) {
-        time = d_impl.d_application_mp->sessionOptions().openQueueTimeout();
     }
 
     BALL_LOG_INFO << "Open queue (ASYNC)"
@@ -1196,25 +1302,19 @@ int Session::configureQueue(QueueId*                  queueId,
                             const bmqt::QueueOptions& options,
                             const bsls::TimeInterval& timeout)
 {
-    // Validate parameters
+    // Validate parameters and resolve the effective timeout
     bmqu::MemOutStream               error;
+    bsls::TimeInterval               time;
     bmqt::ConfigureQueueResult::Enum validationRc =
-        SessionUtil::validateAndSetConfigureQueueParameters(&error,
-                                                            queueId,
-                                                            &d_impl,
-                                                            options,
-                                                            timeout);
+        SessionUtil::prepareConfigureQueue(&error,
+                                           &time,
+                                           queueId,
+                                           &d_impl,
+                                           options,
+                                           timeout);
     if (validationRc != bmqt::ConfigureQueueResult::e_SUCCESS) {
         // Validation failed - abort operation and return error code
-        BALL_LOG_ERROR << error.str();
         return static_cast<int>(validationRc);  // RETURN
-    }
-
-    // Use default timeout (from SessionOptions) if none was provided
-    bsls::TimeInterval time = timeout;
-    if (time == bsls::TimeInterval()) {
-        time =
-            d_impl.d_application_mp->sessionOptions().configureQueueTimeout();
     }
 
     // Convert to bmqimp::Queue and forward the configureQueue to impl
@@ -1237,27 +1337,21 @@ Session::configureQueueSync(QueueId*                  queueId,
                             const bmqt::QueueOptions& options,
                             const bsls::TimeInterval& timeout)
 {
-    // Validate parameters
+    // Validate parameters and resolve the effective timeout
     bmqu::MemOutStream               error;
+    bsls::TimeInterval               time;
     bmqt::ConfigureQueueResult::Enum validationRc =
-        SessionUtil::validateAndSetConfigureQueueParameters(&error,
-                                                            queueId,
-                                                            &d_impl,
-                                                            options,
-                                                            timeout);
+        SessionUtil::prepareConfigureQueue(&error,
+                                           &time,
+                                           queueId,
+                                           &d_impl,
+                                           options,
+                                           timeout);
     if (validationRc != bmqt::ConfigureQueueResult::e_SUCCESS) {
         // Validation failed - abort operation and return error code
-        BALL_LOG_ERROR << error.str();
         return ConfigureQueueStatus(*queueId,
                                     validationRc,
                                     error.str());  // RETURN
-    }
-
-    // Use default timeout (from SessionOptions) if none was provided
-    bsls::TimeInterval time = timeout;
-    if (time == bsls::TimeInterval()) {
-        time =
-            d_impl.d_application_mp->sessionOptions().configureQueueTimeout();
     }
 
     // Convert to bmqimp::Queue and forward the configureQueue to impl (the
@@ -1288,25 +1382,19 @@ int Session::configureQueueAsync(QueueId*                  queueId,
                                  const bmqt::QueueOptions& options,
                                  const bsls::TimeInterval& timeout)
 {
-    // Validate parameters
+    // Validate parameters and resolve the effective timeout
     bmqu::MemOutStream               error;
+    bsls::TimeInterval               time;
     bmqt::ConfigureQueueResult::Enum validationRc =
-        SessionUtil::validateAndSetConfigureQueueParameters(&error,
-                                                            queueId,
-                                                            &d_impl,
-                                                            options,
-                                                            timeout);
+        SessionUtil::prepareConfigureQueue(&error,
+                                           &time,
+                                           queueId,
+                                           &d_impl,
+                                           options,
+                                           timeout);
     if (validationRc != bmqt::ConfigureQueueResult::e_SUCCESS) {
         // Validation failed - abort operation and return error code
-        BALL_LOG_ERROR << error.str();
         return static_cast<int>(validationRc);  // RETURN
-    }
-
-    // Use default timeout (from SessionOptions) if none was provided
-    bsls::TimeInterval time = timeout;
-    if (time == bsls::TimeInterval()) {
-        time =
-            d_impl.d_application_mp->sessionOptions().configureQueueTimeout();
     }
 
     // Convert to bmqimp::Queue and forward the configureQueueAsync to impl
@@ -1342,18 +1430,19 @@ void Session::configureQueueAsync(QueueId*                      queueId,
                              bdlf::PlaceHolders::_1,  // eventImpl
                              callback);
 
-    // Validate parameters
+    // Validate parameters and resolve the effective timeout
     bmqu::MemOutStream               error;
+    bsls::TimeInterval               time;
     bmqt::ConfigureQueueResult::Enum validationRc =
-        SessionUtil::validateAndSetConfigureQueueParameters(&error,
-                                                            queueId,
-                                                            &d_impl,
-                                                            options,
-                                                            timeout);
+        SessionUtil::prepareConfigureQueue(&error,
+                                           &time,
+                                           queueId,
+                                           &d_impl,
+                                           options,
+                                           timeout);
     if (validationRc != bmqt::ConfigureQueueResult::e_SUCCESS) {
         // Validation failed - abort operation and invoke the callback with
         // error result
-        BALL_LOG_ERROR << error.str();
         int rc = static_cast<int>(validationRc);
         d_impl.d_application_mp->brokerSession().enqueueSessionEvent(
             bmqt::SessionEventType::e_QUEUE_CONFIGURE_RESULT,
@@ -1366,13 +1455,6 @@ void Session::configureQueueAsync(QueueId*                      queueId,
         return;  // RETURN
     }
 
-    // Use default timeout (from SessionOptions) if none was provided
-    bsls::TimeInterval time = timeout;
-    if (time == bsls::TimeInterval()) {
-        time =
-            d_impl.d_application_mp->sessionOptions().configureQueueTimeout();
-    }
-
     BALL_LOG_INFO << "Configure queue (ASYNC)"
                   << " [queue: " << *queue << ", options: " << options
                   << ", timeout: " << time << "]";
@@ -1383,23 +1465,18 @@ void Session::configureQueueAsync(QueueId*                      queueId,
 
 int Session::closeQueue(QueueId* queueId, const bsls::TimeInterval& timeout)
 {
-    // Validate parameters
+    // Validate parameters and resolve the effective timeout
     bmqu::MemOutStream           error;
-    bmqt::CloseQueueResult::Enum validationRc =
-        SessionUtil::validateAndSetCloseQueueParameters(&error,
-                                                        queueId,
-                                                        &d_impl,
-                                                        timeout);
+    bsls::TimeInterval           time;
+    bmqt::CloseQueueResult::Enum validationRc = SessionUtil::prepareCloseQueue(
+        &error,
+        &time,
+        queueId,
+        &d_impl,
+        timeout);
     if (validationRc != bmqt::CloseQueueResult::e_SUCCESS) {
         // Validation failed - abort operation and return error code
-        BALL_LOG_ERROR << error.str();
         return static_cast<int>(validationRc);  // RETURN
-    }
-
-    // Use default timeout (from SessionOptions) if none was provided
-    bsls::TimeInterval time = timeout;
-    if (time == bsls::TimeInterval()) {
-        time = d_impl.d_application_mp->sessionOptions().closeQueueTimeout();
     }
 
     // Convert to bmqimp::Queue and forward the configureQueue to impl
@@ -1417,25 +1494,20 @@ int Session::closeQueue(QueueId* queueId, const bsls::TimeInterval& timeout)
 CloseQueueStatus Session::closeQueueSync(QueueId*                  queueId,
                                          const bsls::TimeInterval& timeout)
 {
-    // Validate parameters
+    // Validate parameters and resolve the effective timeout
     bmqu::MemOutStream           error;
-    bmqt::CloseQueueResult::Enum validationRc =
-        SessionUtil::validateAndSetCloseQueueParameters(&error,
-                                                        queueId,
-                                                        &d_impl,
-                                                        timeout);
+    bsls::TimeInterval           time;
+    bmqt::CloseQueueResult::Enum validationRc = SessionUtil::prepareCloseQueue(
+        &error,
+        &time,
+        queueId,
+        &d_impl,
+        timeout);
     if (validationRc != bmqt::CloseQueueResult::e_SUCCESS) {
         // Validation failed - abort operation and return error code
-        BALL_LOG_ERROR << error.str();
         return CloseQueueStatus(*queueId,
                                 validationRc,
                                 error.str());  // RETURN
-    }
-
-    // Use default timeout (from SessionOptions) if none was provided
-    bsls::TimeInterval time = timeout;
-    if (time == bsls::TimeInterval()) {
-        time = d_impl.d_application_mp->sessionOptions().closeQueueTimeout();
     }
 
     // Convert to bmqimp::Queue and forward the configureQueue to impl (the
@@ -1460,33 +1532,33 @@ CloseQueueStatus Session::closeQueueSync(QueueId*                  queueId,
     return status;
 }
 
+// The deprecated `const QueueId&` overload forwards to its (equally
+// deprecated) `QueueId*` counterpart to preserve behavior.
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 int Session::closeQueue(const QueueId&            queueId,
                         const bsls::TimeInterval& timeout)
 {
     QueueId* queue = const_cast<QueueId*>(&queueId);
     return closeQueue(queue, timeout);
 }
+#pragma GCC diagnostic pop
 
 int Session::closeQueueAsync(QueueId*                  queueId,
                              const bsls::TimeInterval& timeout)
 {
-    // Validate parameters
+    // Validate parameters and resolve the effective timeout
     bmqu::MemOutStream           error;
-    bmqt::CloseQueueResult::Enum validationRc =
-        SessionUtil::validateAndSetCloseQueueParameters(&error,
-                                                        queueId,
-                                                        &d_impl,
-                                                        timeout);
+    bsls::TimeInterval           time;
+    bmqt::CloseQueueResult::Enum validationRc = SessionUtil::prepareCloseQueue(
+        &error,
+        &time,
+        queueId,
+        &d_impl,
+        timeout);
     if (validationRc != bmqt::CloseQueueResult::e_SUCCESS) {
         // Validation failed - abort operation and return error code
-        BALL_LOG_ERROR << error.str();
         return static_cast<int>(validationRc);  // RETURN
-    }
-
-    // Use default timeout (from SessionOptions) if none was provided
-    bsls::TimeInterval time = timeout;
-    if (time == bsls::TimeInterval()) {
-        time = d_impl.d_application_mp->sessionOptions().closeQueueTimeout();
     }
 
     // Convert to bmqimp::Queue and forward the configureQueue to impl
@@ -1518,17 +1590,18 @@ void Session::closeQueueAsync(QueueId*                  queueId,
                              bdlf::PlaceHolders::_1,  // eventImpl
                              callback);
 
-    // Validate parameters
+    // Validate parameters and resolve the effective timeout
     bmqu::MemOutStream           error;
-    bmqt::CloseQueueResult::Enum validationRc =
-        SessionUtil::validateAndSetCloseQueueParameters(&error,
-                                                        queueId,
-                                                        &d_impl,
-                                                        timeout);
+    bsls::TimeInterval           time;
+    bmqt::CloseQueueResult::Enum validationRc = SessionUtil::prepareCloseQueue(
+        &error,
+        &time,
+        queueId,
+        &d_impl,
+        timeout);
     if (validationRc != bmqt::CloseQueueResult::e_SUCCESS) {
         // Validation failed - abort operation and invoke the callback with
         // error result
-        BALL_LOG_ERROR << error.str();
         int rc = static_cast<int>(validationRc);
         d_impl.d_application_mp->brokerSession().enqueueSessionEvent(
             bmqt::SessionEventType::e_QUEUE_CLOSE_RESULT,
@@ -1541,12 +1614,6 @@ void Session::closeQueueAsync(QueueId*                  queueId,
         return;  // RETURN
     }
 
-    // Use default timeout (from SessionOptions) if none was provided
-    bsls::TimeInterval time = timeout;
-    if (time == bsls::TimeInterval()) {
-        time = d_impl.d_application_mp->sessionOptions().closeQueueTimeout();
-    }
-
     BALL_LOG_INFO << "Close queue (ASYNC)"
                   << " [queue: " << *queue << ", timeout: " << time << "]";
 
@@ -1555,12 +1622,17 @@ void Session::closeQueueAsync(QueueId*                  queueId,
                                                              eventCallback);
 }
 
+// The deprecated `const QueueId&` overload forwards to its (equally
+// deprecated) `QueueId*` counterpart to preserve behavior.
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 int Session::closeQueueAsync(const QueueId&            queueId,
                              const bsls::TimeInterval& timeout)
 {
     QueueId* queue = const_cast<QueueId*>(&queueId);
     return closeQueueAsync(queue, timeout);
 }
+#pragma GCC diagnostic pop
 
 Event Session::nextEvent(const bsls::TimeInterval& timeout)
 {

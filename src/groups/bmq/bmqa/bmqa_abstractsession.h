@@ -35,6 +35,7 @@
 
 // BDE
 #include <bsl_functional.h>
+#include <bsla_annotations.h>
 #include <bsls_timeinterval.h>
 #include <bsls_types.h>
 
@@ -124,6 +125,7 @@ class AbstractSession {
     /// This method is only to be used if the session is in synchronous mode
     /// (i.e., not using the EventHandler): it must be called once all
     /// threads getting events with `nextEvent()` have been joined.
+    BSLA_DEPRECATED
     virtual void finalizeStop();
 
     /// Load into the specified `builder` an instance of
@@ -172,8 +174,7 @@ class AbstractSession {
                            const bmqt::CorrelationId& correlationId);
 
     /// DEPRECATED: Use the `openQueueSync(QueueId *queueId...)` instead.
-    ///             This method will be marked as `BSLA_DEPRECATED` in future
-    ///             release of libbmq.
+    BSLA_DEPRECATED
     virtual int
     openQueue(QueueId*                  queueId,
               const bmqt::Uri&          uri,
@@ -204,8 +205,8 @@ class AbstractSession {
                   const bsls::TimeInterval& timeout = bsls::TimeInterval());
 
     /// DEPRECATED: Use the `openQueueAsync(...)` with callback flavor
-    ///             instead.  This method will be marked as `BSLA_DEPRECATED`
-    ///             in future release of libbmq.
+    ///             instead.
+    BSLA_DEPRECATED
     virtual int
     openQueueAsync(QueueId*                  queueId,
                    const bmqt::Uri&          uri,
@@ -238,8 +239,8 @@ class AbstractSession {
                    const bsls::TimeInterval& timeout = bsls::TimeInterval());
 
     /// DEPRECATED: Use the `configureQueueSync(QueueId *queueId...)`
-    ///             instead.  This method will be marked as `BSLA_DEPRECATED`
-    ///             in future release of libbmq.
+    ///             instead.
+    BSLA_DEPRECATED
     virtual int
     configureQueue(QueueId*                  queueId,
                    const bmqt::QueueOptions& options,
@@ -263,8 +264,8 @@ class AbstractSession {
         const bsls::TimeInterval& timeout = bsls::TimeInterval());
 
     /// DEPRECATED: Use the `configureQueueAsync(...)` with callback flavor
-    ///             instead.  This method will be marked as `BSLA_DEPRECATED`
-    ///             in future release of libbmq.
+    ///             instead.
+    BSLA_DEPRECATED
     virtual int configureQueueAsync(
         QueueId*                  queueId,
         const bmqt::QueueOptions& options,
@@ -289,8 +290,7 @@ class AbstractSession {
     ///         specified, from the thread invoking `nextEvent`).
     ///
     /// DEPRECATED: Use the `closeQueueSync(QueueId *queueId...)` instead.
-    ///             This method will be marked as `BSLA_DEPRECATED` in future
-    ///             release of libbmq.
+    BSLA_DEPRECATED
     virtual int
     closeQueue(QueueId*                  queueId,
                const bsls::TimeInterval& timeout = bsls::TimeInterval());
@@ -316,8 +316,8 @@ class AbstractSession {
                    const bsls::TimeInterval& timeout = bsls::TimeInterval());
 
     /// DEPRECATED: Use the `closeQueueAsync(...)` with callback flavor
-    ///             instead.  This method will be marked as `BSLA_DEPRECATED`
-    ///             in future release of libbmq.
+    ///             instead.
+    BSLA_DEPRECATED
     virtual int
     closeQueueAsync(QueueId*                  queueId,
                     const bsls::TimeInterval& timeout = bsls::TimeInterval());
