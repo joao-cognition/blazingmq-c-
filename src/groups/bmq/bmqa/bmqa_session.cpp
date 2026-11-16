@@ -1080,6 +1080,8 @@ OpenQueueStatus Session::openQueueSync(QueueId*                  queueId,
     return status;
 }
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 int Session::openQueue(const QueueId&            queueId,
                        const bmqt::Uri&          uri,
                        bsls::Types::Uint64       flags,
@@ -1089,6 +1091,7 @@ int Session::openQueue(const QueueId&            queueId,
     QueueId* queue = const_cast<QueueId*>(&queueId);
     return openQueue(queue, uri, flags, options, timeout);
 }
+#pragma GCC diagnostic pop
 
 int Session::openQueueAsync(QueueId*                  queueId,
                             const bmqt::Uri&          uri,
@@ -1460,12 +1463,15 @@ CloseQueueStatus Session::closeQueueSync(QueueId*                  queueId,
     return status;
 }
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 int Session::closeQueue(const QueueId&            queueId,
                         const bsls::TimeInterval& timeout)
 {
     QueueId* queue = const_cast<QueueId*>(&queueId);
     return closeQueue(queue, timeout);
 }
+#pragma GCC diagnostic pop
 
 int Session::closeQueueAsync(QueueId*                  queueId,
                              const bsls::TimeInterval& timeout)
@@ -1555,12 +1561,15 @@ void Session::closeQueueAsync(QueueId*                  queueId,
                                                              eventCallback);
 }
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 int Session::closeQueueAsync(const QueueId&            queueId,
                              const bsls::TimeInterval& timeout)
 {
     QueueId* queue = const_cast<QueueId*>(&queueId);
     return closeQueueAsync(queue, timeout);
 }
+#pragma GCC diagnostic pop
 
 Event Session::nextEvent(const bsls::TimeInterval& timeout)
 {
